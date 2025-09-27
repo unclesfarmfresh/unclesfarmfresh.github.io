@@ -7,412 +7,469 @@
     <meta name="description" content="Discover the beauty of sustainable living with Uncle's Fresh Farm. Explore organic gardening, backyard poultry, permaculture, and self-sufficiency guides.">
     
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /*
+     * Global Styles - Updated for a cleaner, Apple-like look
+     */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Georgia', serif; 
-            line-height: 1.7;
-            color: #4a4a4a; 
-            background-color: #fcfaf6; 
-        }
+    body {
+        /* Modern, crisp font stack (San Francisco emulation) with Georgia fallback */
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif; 
+        line-height: 1.7;
+        color: #1d1d1f; /* Near-black for high contrast */
+        background-color: #f5f5f7; /* Very light, off-white background */
+    }
 
-        h1, .hero h2 {
-            font-family: 'Papyrus', 'Fantasy', cursive;
-            color: #1a4314; 
-            font-weight: 700;
-        }
+    h1, h3, h4, .hero h2 {
+        /* Set all general headings to the clean system font */
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif; 
+        color: #1d1d1f; 
+        font-weight: 600; 
+    }
 
-        h3, h4 {
-            font-family: 'Georgia', serif;
-            color: #1a4314; 
-            font-weight: 700;
-        }
+    /* Preserve Papyrus only for the main hero heading for a farm style touch */
+    .hero h2 {
+        font-family: 'Papyrus', 'Fantasy', cursive;
+        color: #ffffff;
+    }
+
+    h3, h4 {
+        color: #1a4314; /* Keep the green for section titles */
+        font-weight: 700;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    /*
+     * Header & Navigation - Two-Sided Layout & Icons Redesign
+     */
+    header {
+        background-color: rgba(255, 255, 255, 0.85); /* Slightly translucent white */
+        padding: 0.8rem 0; /* Slimmer profile */
+        border-bottom: none; /* Remove border */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        /* Apple-style subtle shadow */
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 0 4px rgba(0, 0, 0, 0.02); 
+        /* Frosted glass effect (modern browser support) */
+        backdrop-filter: blur(10px); 
+    }
+
+    .header-content {
+        display: flex;
+        /* KEY CHANGE: Align logo left and navigation right */
+        justify-content: space-between; 
+        align-items: center;
+        /* Use full container width now that the elements are split */
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    .logo {
+        /* KEY CHANGE: Remove absolute positioning for left alignment */
+        position: static; 
+        transform: none; 
+    }
+
+    .logo h1 {
+        font-size: 1.1rem; /* Slightly larger for main branding */
+        margin: 0;
+        color: #1d1d1f;
+        font-weight: 600; /* Bolded for brand prominence */
+        letter-spacing: -0.02em; /* Tighter spacing */
+        opacity: 1; /* Full opacity for brand name */
+        cursor: pointer;
+    }
+
+    /* Nav bar styling for centered, airy links */
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2.2rem; /* Increased spacing */
+        margin: 0; 
+        padding: 0;
+    }
+
+    nav a {
+        color: #1d1d1f; 
+        text-decoration: none;
+        font-size: 0.8rem; /* Smallest font size */
+        font-weight: 400; /* Lightest font weight */
+        padding: 0.7rem 0; 
+        transition: color 0.3s ease, opacity 0.3s ease;
+        border-bottom: none; 
+        opacity: 0.7; /* Subtly lower opacity by default */
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 25px;
-        }
+        /* Icon Styling */
+        display: flex;
+        align-items: center;
+    }
 
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 1rem 0;
-            border-bottom: 1px solid #e0e0e0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+    /* Style the icon part of the link */
+    nav a .icon {
+        font-size: 1rem; /* Slightly larger icon */
+        margin-right: 0.4rem;
+        line-height: 1;
+        opacity: 0.8; /* Slightly subdued icon */
+        font-weight: 300; /* Thin look for the icon */
+        /* You can replace these simple text characters with proper SVG icons 
+           for higher fidelity, but this gives the linear effect. */
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    nav a:hover {
+        color: #007aff; /* Clean blue hover effect */
+        opacity: 1; 
+        border-bottom: none; 
+    }
+    
+    /* ... The rest of the original CSS follows, ensuring all non-header styles are preserved ... */
 
-        .logo h1 {
-            font-size: 1.8rem;
-            margin: 0;
-            color: #1a4314; 
-        }
+    .hero {
+        position: relative;
+        height: 600px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+        background-color: #386641;
+    }
 
-        .logo h1 span {
-            display: inline-block;
-            margin-right: 0.25rem;
-            font-size: 1.2em; 
-        }
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('Images/Hero.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.7); 
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        padding: 2rem;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    
+    .hero h2 {
+        font-size: 4.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+        color: #ffffff;
+    }
 
-        nav a {
-            color: #386641; 
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-            border-bottom: 2px solid transparent;
-            font-family: 'Georgia', serif;
-        }
+    .hero p {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0 auto 2.5rem;
+        font-weight: 400;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        background-color: #799a5e; 
+        color: #1a4314; 
+        padding: 1.2rem 2.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 6px 20px rgba(121, 154, 94, 0.4);
+        font-family: 'Georgia', serif;
+    }
 
-        nav a:hover {
-            color: #799a5e; 
-            border-bottom: 2px solid #799a5e;
-        }
-        
+    .cta-button:hover {
+        background-color: #92b975; 
+        transform: translateY(-3px);
+    }
+
+    main {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 4rem;
+        color: #1a4314;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: #799a5e; 
+        border-radius: 2px;
+    }
+
+    .topic-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 35px;
+    }
+
+    .topic-card {
+        background-color: #ffffff;
+        border-radius: 6px; 
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+    }
+
+    .topic-card:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    }
+
+    .topic-image {
+        width: 100%;
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+        background-color: #e6eedc;
+    }
+    
+    .topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
+    .topic-image.poultry { background-image: url('Images/Chickens.jpg'); }
+    .topic-image.dairy { background-image: url('Images/Sunflower.jpg'); }
+    .topic-image.permaculture { background-image: url('https://via.placeholder.com/400x220/9fc0a8/ffffff?text=Permaculture+Design'); }
+    .topic-image.livestock { background-image: url('https://via.placeholder.com/400x220/b0a498/ffffff?text=Small+Livestock'); }
+    .topic-image.self-sufficiency { background-image: url('https://via.placeholder.com/400x220/8b8f8b/ffffff?text=Homestead+Lifestyle'); }
+
+    .topic-content {
+        padding: 1.8rem;
+        text-align: center;
+    }
+    
+    .topic-content h4 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+        color: #1a4314;
+    }
+    
+    .topic-content p {
+        color: #6a6a6a;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .latest-posts {
+        margin-top: 6rem;
+    }
+
+    .post-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .post-item {
+        background-color: #ffffff;
+        border-radius: 6px; 
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+    }
+
+    .post-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .post-thumbnail {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-color: #e0e6e0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .post-thumbnail.hugelkultur { 
+        background-image: url('[INSERT SOIL IMAGE URL HERE]');
+    }
+    .post-thumbnail.rabbits { 
+        background-image: url('[INSERT RABBIT IMAGE URL HERE]');
+    }
+    .post-thumbnail.grazing { 
+        background-image: url('[INSERT CHICKEN IMAGE URL HERE]');
+    }
+
+    .post-content {
+        padding: 1.5rem;
+    }
+
+    .post-content h4 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: #1a4314;
+    }
+
+    .post-content .date {
+        font-size: 0.85rem;
+        color: #799a5e;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .post-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        color: #6a6a6a;
+    }
+
+    .read-more {
+        color: #799a5e;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 0.95rem;
+    }
+
+    .read-more:hover {
+        color: #1a4314;
+    }
+
+    footer {
+        background-color: #1a4314; 
+        color: #e0e6e0;
+        text-align: center;
+        padding: 4rem 0;
+        font-size: 0.95rem;
+        margin-top: 6rem;
+    }
+    
+    footer p {
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    .social-links a {
+        color: #e0e6e0;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        border-bottom: 1px solid transparent;
+    }
+
+    .social-links a:hover {
+        color: #799a5e;
+        border-color: #799a5e;
+    }
+
+    /* Media Queries remain largely the same, ensuring responsiveness */
+    @media (max-width: 992px) {
         .hero {
-            position: relative;
-            height: 600px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-            background-color: #386641;
+            height: 500px;
         }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('Images/Hero.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.7); 
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            padding: 2rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-        }
-        
         .hero h2 {
-            font-size: 4.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            color: #ffffff;
+            font-size: 3.5rem;
         }
-
-        .hero p {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin: 0 auto 2.5rem;
-            font-weight: 400;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #799a5e; 
-            color: #1a4314; 
-            padding: 1.2rem 2.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 6px 20px rgba(121, 154, 94, 0.4);
-            font-family: 'Georgia', serif;
-        }
-
-        .cta-button:hover {
-            background-color: #92b975; 
-            transform: translateY(-3px);
-        }
-
-        main {
-            padding: 5rem 0;
-        }
-
         .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 4rem;
-            color: #1a4314;
-            position: relative;
+            font-size: 2.2rem;
         }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #799a5e; 
-            border-radius: 2px;
+    }
+    @media (max-width: 768px) {
+        /* Mobile layout: logo and navigation stack vertically and center */
+        .header-content {
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 100%;
         }
-
-        .topic-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+        .logo {
+            order: -1; 
         }
-
-        .topic-card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            border: 1px solid #e0e0e0;
+        .logo h1 {
+            font-size: 1.5rem;
         }
-
-        .topic-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 45px rgba(0,0,0,0.15);
-        }
-
-        .topic-image {
-            width: 100%;
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            background-color: #e6eedc;
-        }
-        
-        .topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
-        .topic-image.poultry { background-image: url('Images/Chickens.jpg'); }
-        .topic-image.dairy { background-image: url('Images/Sunflower.jpg'); }
-        .topic-image.permaculture { background-image: url('https://via.placeholder.com/400x220/9fc0a8/ffffff?text=Permaculture+Design'); }
-        .topic-image.livestock { background-image: url('https://via.placeholder.com/400x220/b0a498/ffffff?text=Small+Livestock'); }
-        .topic-image.self-sufficiency { background-image: url('https://via.placeholder.com/400x220/8b8f8b/ffffff?text=Homestead+Lifestyle'); }
-
-        .topic-content {
-            padding: 1.8rem;
-            text-align: center;
-        }
-        
-        .topic-content h4 {
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-            color: #1a4314;
-        }
-        
-        .topic-content p {
-            color: #6a6a6a;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .latest-posts {
-            margin-top: 6rem;
-        }
-
-        .post-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .post-item {
-            background-color: #ffffff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            border: 1px solid #e0e0e0;
-        }
-
-        .post-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-        }
-
-        .post-thumbnail {
-            width: 100%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            background-color: #e0e6e0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .post-thumbnail.hugelkultur { 
-            background-image: url('[INSERT SOIL IMAGE URL HERE]');
-        }
-        .post-thumbnail.rabbits { 
-            background-image: url('[INSERT RABBIT IMAGE URL HERE]');
-        }
-        .post-thumbnail.grazing { 
-            background-image: url('[INSERT CHICKEN IMAGE URL HERE]');
-        }
-
-        .post-content {
-            padding: 1.5rem;
-        }
-
-        .post-content h4 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: #1a4314;
-        }
-
-        .post-content .date {
-            font-size: 0.85rem;
-            color: #799a5e;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .post-content p {
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            color: #6a6a6a;
-        }
-
-        .read-more {
-            color: #799a5e;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .read-more:hover {
-            color: #1a4314;
-        }
-
-        footer {
-            background-color: #1a4314; 
-            color: #e0e6e0;
-            text-align: center;
-            padding: 4rem 0;
-            font-size: 0.95rem;
-            margin-top: 6rem;
-        }
-        
-        footer p {
-            margin-bottom: 1rem;
-        }
-
-        .social-links {
-            margin-top: 1.5rem;
-            display: flex;
-            justify-content: center;
+        nav ul {
+            gap: 1rem;
             flex-wrap: wrap;
-            gap: 1.5rem;
+            justify-content: center;
         }
-        
-        .social-links a {
-            color: #e0e6e0;
-            text-decoration: none;
+        nav a {
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+        }
+        .hero {
+            height: 400px;
+            padding: 3rem 1rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+        }
+        .cta-button {
+            padding: 1rem 1.8rem;
             font-size: 1rem;
-            transition: color 0.3s ease;
-            border-bottom: 1px solid transparent;
         }
-
-        .social-links a:hover {
-            color: #799a5e;
-            border-color: #799a5e;
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
         }
-
-        @media (max-width: 992px) {
-            .hero {
-                height: 500px;
-            }
-            .hero h2 {
-                font-size: 3.5rem;
-            }
-            .section-title {
-                font-size: 2.2rem;
-            }
+        .topic-grid, .post-list {
+            grid-template-columns: 1fr;
         }
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .logo h1 {
-                font-size: 1.5rem;
-            }
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero {
-                height: 400px;
-                padding: 3rem 1rem;
-            }
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-            .hero p {
-                font-size: 1.1rem;
-            }
-            .cta-button {
-                padding: 1rem 1.8rem;
-                font-size: 1rem;
-            }
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 3rem;
-            }
-            .topic-grid, .post-list {
-                grid-template-columns: 1fr;
-            }
+    }
+    @media (max-width: 480px) {
+        .hero h2 {
+            font-size: 2rem;
         }
-        @media (max-width: 480px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
+        .hero p {
+            font-size: 1rem;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
-                <h1><span>🐓</span> Uncle's Fresh Farm</h1>
+                <h1>Uncle's Fresh Farm</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#guides">Guides</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home"><span class="icon">⌂</span> Home</a></li>
+                    <li><a href="#guides"><span class="icon">▤</span> Guides</a></li>
+                    <li><a href="#blog"><span class="icon">📰</span> Blog</a></li>
+                    <li><a href="#contact"><span class="icon">✉</span> Contact</a></li>
                 </ul>
             </nav>
         </div>
