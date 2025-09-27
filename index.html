@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uncle's Fresh Farm | Your Guide to Beautiful, Sustainable Homesteading</title>
-    <meta name="description" content="Discover the beauty of sustainable living with Uncle's Fresh Farm. Explore organic gardening, backyard poultry, permaculture, and self-sufficiency guides.">
-    
+/* Update the existing style block */
 <style>
-        /* BASE & TYPOGRAPHY */
+        /* BASE & TYPOGRAPHY - (No change here) */
         * {
             margin: 0;
             padding: 0;
@@ -22,14 +15,14 @@
             background-color: #fcfaf6; 
         }
 
-        /* STYLIZED PAPYRUS FOR BIGGEST HEADINGS ONLY */
+        /* STYLIZED PAPYRUS FOR BIGGEST HEADINGS ONLY - (No change here) */
         h1, .hero h2 {
             font-family: 'Papyrus', 'Fantasy', cursive;
             color: #1a4314; 
             font-weight: 700;
         }
 
-        /* LEGIBLE GEORGIA FOR SECTION/CARD HEADINGS AND BODY */
+        /* LEGIBLE GEORGIA FOR SECTION/CARD HEADINGS AND BODY - (No change here) */
         h3, h4 {
             font-family: 'Georgia', serif;
             color: #1a4314; 
@@ -42,7 +35,7 @@
             padding: 0 25px;
         }
 
-        /* HEADER & NAVIGATION */
+        /* HEADER & NAVIGATION - (No change here) */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 1rem 0;
@@ -85,7 +78,7 @@
             padding: 0.5rem 0;
             transition: color 0.3s ease, border-bottom 0.3s ease;
             border-bottom: 2px solid transparent;
-            font-family: 'Georgia', serif; /* Keep nav text legible */
+            font-family: 'Georgia', serif; 
         }
 
         nav a:hover {
@@ -93,7 +86,7 @@
             border-bottom: 2px solid #799a5e;
         }
         
-        /* HERO SECTION - VISUALLY DOMINANT */
+        /* HERO SECTION - IMAGE PATH UPDATED */
         .hero {
             position: relative;
             height: 600px; 
@@ -112,8 +105,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* ✅ HERO IMAGE PATH UPDATED */
-            background-image: url('images/hero.jpg');
+            /* ✅ PATH CHANGED: 'images/Hero.jpg' */
+            background-image: url('./images/Hero.jpg'); 
             background-size: cover;
             background-position: center;
             filter: brightness(0.7); 
@@ -153,7 +146,7 @@
             font-size: 1.1rem;
             transition: background-color 0.3s ease, transform 0.2s ease;
             box-shadow: 0 6px 20px rgba(121, 154, 94, 0.4);
-            font-family: 'Georgia', serif; /* Keep button text legible */
+            font-family: 'Georgia', serif;
         }
 
         .cta-button:hover {
@@ -161,7 +154,7 @@
             transform: translateY(-3px);
         }
 
-        /* MAIN CONTENT SECTIONS */
+        /* MAIN CONTENT SECTIONS - (No change here) */
         main {
             padding: 5rem 0;
         }
@@ -186,7 +179,7 @@
             border-radius: 2px;
         }
 
-        /* TOP GUIDES / TOPIC GRID - IMAGE FOCUSED */
+        /* TOP GUIDES / TOPIC GRID - (No change here) */
         .topic-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -216,7 +209,7 @@
             background-color: #e6eedc;
         }
         
-        /* Topic Image Placeholders */
+        /* Topic Image Placeholders - (No change here) */
         .topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
         .topic-image.poultry { background-image: url('https://via.placeholder.com/400x220/c2b3a0/ffffff?text=Happy+Chickens'); }
         .topic-image.dairy { background-image: url('https://via.placeholder.com/400x220/a2b28c/ffffff?text=Dairy+Goat'); }
@@ -242,7 +235,7 @@
             line-height: 1.6;
         }
 
-        /* LATEST POSTS - VISUAL PREVIEWS */
+        /* LATEST POSTS - IMAGE PATHS UPDATED */
         .latest-posts {
             margin-top: 6rem;
         }
@@ -279,16 +272,16 @@
         
         /* Individual Blog Post Images (using retrieved URLs) */
         .post-thumbnail.hugelkultur { 
-            /* ✅ SUNFLOWER IMAGE PATH UPDATED */
-            background-image: url('images/sunflower.jpg');
+            /* ✅ PATH CHANGED: 'images/Sunflower.jpg' */
+            background-image: url('./images/Sunflower.jpg');
         }
         .post-thumbnail.rabbits { 
-            /* ✅ RABBITS IMAGE PATH UPDATED */
-            background-image: url('images/rabbits.jpg');
+            /* ✅ PATH CHANGED: 'images/Rabbits.jpg' */
+            background-image: url('./images/Rabbits.jpg');
         }
         .post-thumbnail.grazing { 
-            /* ✅ CHICKENS IMAGE PATH UPDATED */
-            background-image: url('images/chickens.jpg');
+            /* ✅ PATH CHANGED: 'images/Chickens.jpg' */
+            background-image: url('./images/Chickens.jpg');
         }
 
         .post-content {
@@ -327,7 +320,7 @@
             color: #1a4314;
         }
 
-        /* FOOTER */
+        /* FOOTER - (No change here) */
         footer {
             background-color: #1a4314; 
             color: #e0e6e0;
@@ -362,7 +355,7 @@
             border-color: #799a5e;
         }
 
-        /* RESPONSIVENESS */
+        /* RESPONSIVENESS - (No change here) */
         @media (max-width: 992px) {
             .hero {
                 height: 500px;
@@ -418,139 +411,3 @@
             }
         }
     </style>
-</head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <h1><span>🌽</span> Uncle's Fresh Farm</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#guides">Guides</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-background">
-                </div>
-            <div class="hero-content">
-                <h2>Cultivate Your Dreams: Life on Uncle's Fresh Farm</h2>
-                <p>Discover the joy and fulfillment of sustainable living. Expert guides, inspiring stories, and practical advice for every homesteader.</p>
-                <a href="#guides" class="cta-button">EXPLORE GUIDES & RESOURCES →</a>
-            </div>
-        </section>
-
-        <div class="container">
-            <section class="features" id="guides">
-                <h3 class="section-title">Your Path to a Thriving Homestead</h3>
-                <div class="topic-grid">
-                    
-                    <div class="topic-card">
-                        <div class="topic-image gardening"></div>
-                        <div class="topic-content">
-                            <h4>Organic Vegetable Gardening</h4>
-                            <p>Unlock the secrets to bountiful harvests with natural methods, composting, and companion planting.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="topic-card">
-                        <div class="topic-image poultry"></div>
-                        <div class="topic-content">
-                            <h4>Backyard Poultry & Eggs</h4>
-                            <p>Raise healthy chickens, ducks, or quail for fresh eggs and sustainable meat. Coops, feed, and care.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="topic-card">
-                        <div class="topic-image dairy"></div>
-                        <div class="topic-content">
-                            <h4>Dairy & Livestock Care</h4>
-                            <p>Expert advice on managing dairy animals, ethical husbandry, breeding, and general livestock health.</p>
-                        </div>
-                    </div>
-
-                    <div class="topic-card">
-                        <div class="topic-image permaculture"></div>
-                        <div class="topic-content">
-                            <h4>Permaculture & Soil Health</h4>
-                            <p>Design regenerative systems that mimic nature, build fertile soil, and create self-sustaining ecosystems.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="topic-card">
-                        <div class="topic-image livestock"></div>
-                        <div class="topic-content">
-                            <h4>Small Livestock Management</h4>
-                            <p>Comprehensive guides on raising rabbits, pigs, and other small-scale animals for diversified homestead needs.</p>
-                        </div>
-                    </div>
-
-                    <div class="topic-card">
-                        <div class="topic-image self-sufficiency"></div>
-                        <div class="topic-content">
-                            <h4>Self-Sufficiency & Preparedness</h4>
-                            <p>Learn vital skills for energy independence, water conservation, food preservation, and resilient living.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="latest-posts" id="blog">
-                <h3 class="section-title">Latest Inspiration from the Farm Blog</h3>
-                <div class="post-list">
-                    <article class="post-item">
-                        <div class="post-thumbnail hugelkultur">
-                            </div>
-                        <div class="post-content">
-                            <h4>Growing Giant Sunflowers for Farm Appeal</h4>
-                            <p class="date">Article Coming Soon</p>
-                            <p>Discover the best practices for cultivating massive sunflowers—perfect for shade, bird feed, and stunning backdrops.</p>
-                            <a href="#" class="read-more">Read Full Post →</a>
-                        </div>
-                    </article>
-                    
-                    <article class="post-item">
-                        <div class="post-thumbnail rabbits">
-                            </div>
-                        <div class="post-content">
-                            <h4>Is Raising Meat Rabbits Right for Your Family?</h4>
-                            <p class="date">Article Coming Soon</p>
-                            <p>A balanced look at the benefits and considerations of integrating rabbits into your homestead's protein production.</p>
-                            <a href="#" class="read-more">Read Full Post →</a>
-                        </div>
-                    </article>
-                    
-                    <article class="post-item">
-                        <div class="post-thumbnail grazing">
-                            </div>
-                        <div class="post-content">
-                            <h4>A Beginner's Guide to Rotational Grazing for Chickens</h4>
-                            <p class="date">Article Coming Soon</p>
-                            <p>Boost flock health, control pests, and enrich your soil with this simple yet powerful pasturing strategy.</p>
-                            <a href="#" class="read-more">Read Full Post →</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Uncle's Fresh Farm. Cultivating a beautiful, self-sufficient future.</p>
-            <div class="social-links">
-                <a href="#">Join Our Newsletter</a>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
