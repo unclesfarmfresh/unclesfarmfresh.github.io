@@ -7,7 +7,6 @@
     <meta name="description" content="Discover the beauty of sustainable living with Uncle's Fresh Farm. Explore organic gardening, backyard poultry, permaculture, and self-sufficiency guides.">
     
 <style>
-        /* BASE & TYPOGRAPHY */
         * {
             margin: 0;
             padding: 0;
@@ -15,21 +14,18 @@
         }
 
         body {
-            /* Legible body font */
             font-family: 'Georgia', serif; 
             line-height: 1.7;
             color: #4a4a4a; 
             background-color: #fcfaf6; 
         }
 
-        /* STYLIZED PAPYRUS FOR BIGGEST HEADINGS ONLY */
         h1, .hero h2 {
             font-family: 'Papyrus', 'Fantasy', cursive;
             color: #1a4314; 
             font-weight: 700;
         }
 
-        /* LEGIBLE GEORGIA FOR SECTION/CARD HEADINGS AND BODY */
         h3, h4 {
             font-family: 'Georgia', serif;
             color: #1a4314; 
@@ -42,7 +38,6 @@
             padding: 0 25px;
         }
 
-        /* HEADER & NAVIGATION */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 1rem 0;
@@ -68,7 +63,6 @@
         .logo h1 span {
             display: inline-block;
             margin-right: 0.25rem;
-            /* Rotation animation REMOVED, but property kept for structure */
             font-size: 1.2em; 
         }
 
@@ -86,7 +80,7 @@
             padding: 0.5rem 0;
             transition: color 0.3s ease, border-bottom 0.3s ease;
             border-bottom: 2px solid transparent;
-            font-family: 'Georgia', serif; /* Keep nav text legible */
+            font-family: 'Georgia', serif;
         }
 
         nav a:hover {
@@ -94,7 +88,6 @@
             border-bottom: 2px solid #799a5e;
         }
         
-        /* HERO SECTION - VISUALLY DOMINANT */
         .hero {
             position: relative;
             height: 600px; 
@@ -113,7 +106,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* >>>>>>>> PASTE YOUR HERO IMAGE URL HERE <<<<<<<< */
             background-image: url('[INSERT HERO IMAGE URL HERE]');
             background-size: cover;
             background-position: center;
@@ -154,7 +146,7 @@
             font-size: 1.1rem;
             transition: background-color 0.3s ease, transform 0.2s ease;
             box-shadow: 0 6px 20px rgba(121, 154, 94, 0.4);
-            font-family: 'Georgia', serif; /* Keep button text legible */
+            font-family: 'Georgia', serif;
         }
 
         .cta-button:hover {
@@ -162,7 +154,6 @@
             transform: translateY(-3px);
         }
 
-        /* MAIN CONTENT SECTIONS */
         main {
             padding: 5rem 0;
         }
@@ -187,7 +178,6 @@
             border-radius: 2px;
         }
 
-        /* TOP GUIDES / TOPIC GRID - IMAGE FOCUSED */
         .topic-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -217,14 +207,12 @@
             background-color: #e6eedc;
         }
         
-        /* Topic Image Placeholders */
         .topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
         .topic-image.poultry { background-image: url('https://via.placeholder.com/400x220/c2b3a0/ffffff?text=Happy+Chickens'); }
         .topic-image.dairy { background-image: url('https://via.placeholder.com/400x220/a2b28c/ffffff?text=Dairy+Goat'); }
         .topic-image.permaculture { background-image: url('https://via.placeholder.com/400x220/9fc0a8/ffffff?text=Permaculture+Design'); }
         .topic-image.livestock { background-image: url('https://via.placeholder.com/400x220/b0a498/ffffff?text=Small+Livestock'); }
         .topic-image.self-sufficiency { background-image: url('https://via.placeholder.com/400x220/8b8f8b/ffffff?text=Homestead+Lifestyle'); }
-
 
         .topic-content {
             padding: 1.8rem;
@@ -243,7 +231,6 @@
             line-height: 1.6;
         }
 
-        /* LATEST POSTS - VISUAL PREVIEWS */
         .latest-posts {
             margin-top: 6rem;
         }
@@ -278,17 +265,13 @@
             border-bottom: 1px solid #eee;
         }
         
-        /* Individual Blog Post Images (using retrieved URLs) */
         .post-thumbnail.hugelkultur { 
-            /* >>>>>>>> PASTE YOUR SOIL/GARDEN IMAGE URL HERE <<<<<<<< */
             background-image: url('[INSERT SOIL IMAGE URL HERE]');
         }
         .post-thumbnail.rabbits { 
-            /* >>>>>>>> PASTE YOUR RABBIT IMAGE URL HERE <<<<<<<< */
             background-image: url('[INSERT RABBIT IMAGE URL HERE]');
         }
         .post-thumbnail.grazing { 
-            /* >>>>>>>> PASTE YOUR CHICKEN IMAGE URL HERE <<<<<<<< */
             background-image: url('[INSERT CHICKEN IMAGE URL HERE]');
         }
 
@@ -328,7 +311,6 @@
             color: #1a4314;
         }
 
-        /* FOOTER */
         footer {
             background-color: #1a4314; 
             color: #e0e6e0;
@@ -363,7 +345,6 @@
             border-color: #799a5e;
         }
 
-        /* RESPONSIVENESS */
         @media (max-width: 992px) {
             .hero {
                 height: 500px;
@@ -424,7 +405,7 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <h1><span>🌽</span> Uncle's Fresh Farm</h1>
+                <h1><span>🐓</span> Uncle's Fresh Farm</h1>
             </div>
             <nav>
                 <ul>
@@ -439,8 +420,7 @@
 
     <main>
         <section class="hero">
-            <div class="hero-background">
-                </div>
+            <div class="hero-background"></div>
             <div class="hero-content">
                 <h2>Cultivate Your Dreams: Life on Uncle's Fresh Farm</h2>
                 <p>Discover the joy and fulfillment of sustainable living. Expert guides, inspiring stories, and practical advice for every homesteader.</p>
@@ -507,8 +487,7 @@
                 <h3 class="section-title">Latest Inspiration from the Farm Blog</h3>
                 <div class="post-list">
                     <article class="post-item">
-                        <div class="post-thumbnail hugelkultur">
-                            </div>
+                        <div class="post-thumbnail hugelkultur"></div>
                         <div class="post-content">
                             <h4>Building a Hugelkultur Bed for Water Retention</h4>
                             <p class="date">Article Coming Soon</p>
@@ -518,8 +497,7 @@
                     </article>
                     
                     <article class="post-item">
-                        <div class="post-thumbnail rabbits">
-                            </div>
+                        <div class="post-thumbnail rabbits"></div>
                         <div class="post-content">
                             <h4>Is Raising Meat Rabbits Right for Your Family?</h4>
                             <p class="date">Article Coming Soon</p>
@@ -529,8 +507,7 @@
                     </article>
                     
                     <article class="post-item">
-                        <div class="post-thumbnail grazing">
-                            </div>
+                        <div class="post-thumbnail grazing"></div>
                         <div class="post-content">
                             <h4>A Beginner's Guide to Rotational Grazing for Chickens</h4>
                             <p class="date">Article Coming Soon</p>
