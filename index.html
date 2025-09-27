@@ -1,6 +1,5 @@
-/* Update the existing style block */
 <style>
-        /* BASE & TYPOGRAPHY - (No change here) */
+        /* BASE & TYPOGRAPHY */
         * {
             margin: 0;
             padding: 0;
@@ -15,14 +14,14 @@
             background-color: #fcfaf6; 
         }
 
-        /* STYLIZED PAPYRUS FOR BIGGEST HEADINGS ONLY - (No change here) */
+        /* STYLIZED PAPYRUS FOR BIGGEST HEADINGS ONLY */
         h1, .hero h2 {
             font-family: 'Papyrus', 'Fantasy', cursive;
             color: #1a4314; 
             font-weight: 700;
         }
 
-        /* LEGIBLE GEORGIA FOR SECTION/CARD HEADINGS AND BODY - (No change here) */
+        /* LEGIBLE GEORGIA FOR SECTION/CARD HEADINGS AND BODY */
         h3, h4 {
             font-family: 'Georgia', serif;
             color: #1a4314; 
@@ -35,7 +34,7 @@
             padding: 0 25px;
         }
 
-        /* HEADER & NAVIGATION - (No change here) */
+        /* HEADER & NAVIGATION */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 1rem 0;
@@ -78,7 +77,7 @@
             padding: 0.5rem 0;
             transition: color 0.3s ease, border-bottom 0.3s ease;
             border-bottom: 2px solid transparent;
-            font-family: 'Georgia', serif; 
+            font-family: 'Georgia', serif; /* Keep nav text legible */
         }
 
         nav a:hover {
@@ -86,7 +85,7 @@
             border-bottom: 2px solid #799a5e;
         }
         
-        /* HERO SECTION - IMAGE PATH UPDATED */
+        /* HERO SECTION - VISUALLY DOMINANT */
         .hero {
             position: relative;
             height: 600px; 
@@ -105,8 +104,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* ✅ PATH CHANGED: 'images/Hero.jpg' */
-            background-image: url('./images/Hero.jpg'); 
+            /* ✅ HERO IMAGE PATH: Corrected Case and relative path prefix */
+            background-image: url('./images/Hero.jpg');
             background-size: cover;
             background-position: center;
             filter: brightness(0.7); 
@@ -146,7 +145,7 @@
             font-size: 1.1rem;
             transition: background-color 0.3s ease, transform 0.2s ease;
             box-shadow: 0 6px 20px rgba(121, 154, 94, 0.4);
-            font-family: 'Georgia', serif;
+            font-family: 'Georgia', serif; /* Keep button text legible */
         }
 
         .cta-button:hover {
@@ -154,7 +153,7 @@
             transform: translateY(-3px);
         }
 
-        /* MAIN CONTENT SECTIONS - (No change here) */
+        /* MAIN CONTENT SECTIONS */
         main {
             padding: 5rem 0;
         }
@@ -179,7 +178,7 @@
             border-radius: 2px;
         }
 
-        /* TOP GUIDES / TOPIC GRID - (No change here) */
+        /* TOP GUIDES / TOPIC GRID - IMAGE FOCUSED */
         .topic-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -209,7 +208,7 @@
             background-color: #e6eedc;
         }
         
-        /* Topic Image Placeholders - (No change here) */
+        /* Topic Image Placeholders */
         .topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
         .topic-image.poultry { background-image: url('https://via.placeholder.com/400x220/c2b3a0/ffffff?text=Happy+Chickens'); }
         .topic-image.dairy { background-image: url('https://via.placeholder.com/400x220/a2b28c/ffffff?text=Dairy+Goat'); }
@@ -235,7 +234,7 @@
             line-height: 1.6;
         }
 
-        /* LATEST POSTS - IMAGE PATHS UPDATED */
+        /* LATEST POSTS - VISUAL PREVIEWS */
         .latest-posts {
             margin-top: 6rem;
         }
@@ -270,17 +269,17 @@
             border-bottom: 1px solid #eee;
         }
         
-        /* Individual Blog Post Images (using retrieved URLs) */
+        /* Individual Blog Post Images (using corrected local paths) */
         .post-thumbnail.hugelkultur { 
-            /* ✅ PATH CHANGED: 'images/Sunflower.jpg' */
+            /* ✅ SUNFLOWER IMAGE PATH: Corrected Case and relative path prefix */
             background-image: url('./images/Sunflower.jpg');
         }
         .post-thumbnail.rabbits { 
-            /* ✅ PATH CHANGED: 'images/Rabbits.jpg' */
+            /* ✅ RABBITS IMAGE PATH: Corrected Case and relative path prefix */
             background-image: url('./images/Rabbits.jpg');
         }
         .post-thumbnail.grazing { 
-            /* ✅ PATH CHANGED: 'images/Chickens.jpg' */
+            /* ✅ CHICKENS IMAGE PATH: Corrected Case and relative path prefix */
             background-image: url('./images/Chickens.jpg');
         }
 
@@ -320,7 +319,7 @@
             color: #1a4314;
         }
 
-        /* FOOTER - (No change here) */
+        /* FOOTER */
         footer {
             background-color: #1a4314; 
             color: #e0e6e0;
@@ -355,7 +354,7 @@
             border-color: #799a5e;
         }
 
-        /* RESPONSIVENESS - (No change here) */
+        /* RESPONSIVENESS */
         @media (max-width: 992px) {
             .hero {
                 height: 500px;
