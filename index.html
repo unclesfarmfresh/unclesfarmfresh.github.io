@@ -7,9 +7,6 @@
     <meta name="description" content="Discover the beauty of sustainable living with Uncle's Fresh Farm. Explore organic gardening, backyard poultry, permaculture, and self-sufficiency guides.">
     
 <style>
-    /*
-     * Global Styles - Updated for a cleaner, Apple-like look
-     */
     * {
         margin: 0;
         padding: 0;
@@ -17,28 +14,25 @@
     }
 
     body {
-        /* Modern, crisp font stack (San Francisco emulation) with Georgia fallback */
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif; 
         line-height: 1.7;
-        color: #1d1d1f; /* Near-black for high contrast */
-        background-color: #f5f5f7; /* Very light, off-white background */
+        color: #1d1d1f;
+        background-color: #f5f5f7;
     }
 
-    h1, h3, h4, .hero h2 {
-        /* Set all general headings to the clean system font */
+    h1, h2, h3, h4 {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif; 
         color: #1d1d1f; 
         font-weight: 600; 
     }
 
-    /* Preserve Papyrus only for the main hero heading for a farm style touch */
     .hero h2 {
         font-family: 'Papyrus', 'Fantasy', cursive;
         color: #ffffff;
     }
 
     h3, h4 {
-        color: #1a4314; /* Keep the green for section titles */
+        color: #1a4314;
         font-weight: 700;
     }
     
@@ -48,54 +42,38 @@
         padding: 0 25px;
     }
 
-    /*
-     * Header & Navigation - Two-Sided Layout & Icons Redesign
-     */
     header {
-        background-color: rgba(255, 255, 255, 0.85); /* Slightly translucent white */
-        padding: 0.8rem 0; /* Slimmer profile */
-        border-bottom: none; /* Remove border */
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 0.8rem 0;
         position: sticky;
         top: 0;
         z-index: 1000;
-        /* Apple-style subtle shadow */
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 0 4px rgba(0, 0, 0, 0.02); 
-        /* Frosted glass effect (modern browser support) */
         backdrop-filter: blur(10px); 
     }
 
     .header-content {
         display: flex;
-        /* KEY CHANGE: Align logo left and navigation right */
         justify-content: space-between; 
         align-items: center;
-        /* Use full container width now that the elements are split */
         max-width: 1200px; 
         margin: 0 auto;
         padding: 0 25px;
     }
 
-    .logo {
-        /* KEY CHANGE: Remove absolute positioning for left alignment */
-        position: static; 
-        transform: none; 
-    }
-
     .logo h1 {
-        font-size: 1.1rem; /* Slightly larger for main branding */
+        font-size: 1.1rem;
         margin: 0;
         color: #1d1d1f;
-        font-weight: 600; /* Bolded for brand prominence */
-        letter-spacing: -0.02em; /* Tighter spacing */
-        opacity: 1; /* Full opacity for brand name */
+        font-weight: 600;
+        letter-spacing: -0.02em;
         cursor: pointer;
     }
 
-    /* Nav bar styling for centered, airy links */
     nav ul {
         list-style: none;
         display: flex;
-        gap: 2.2rem; /* Increased spacing */
+        gap: 2.2rem;
         margin: 0; 
         padding: 0;
     }
@@ -103,37 +81,27 @@
     nav a {
         color: #1d1d1f; 
         text-decoration: none;
-        font-size: 0.8rem; /* Smallest font size */
-        font-weight: 400; /* Lightest font weight */
+        font-size: 0.8rem;
+        font-weight: 400;
         padding: 0.7rem 0; 
         transition: color 0.3s ease, opacity 0.3s ease;
-        border-bottom: none; 
-        opacity: 0.7; /* Subtly lower opacity by default */
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        
-        /* Icon Styling */
+        opacity: 0.7;
         display: flex;
         align-items: center;
     }
 
-    /* Style the icon part of the link */
     nav a .icon {
-        font-size: 1rem; /* Slightly larger icon */
+        font-size: 1rem;
         margin-right: 0.4rem;
         line-height: 1;
-        opacity: 0.8; /* Slightly subdued icon */
-        font-weight: 300; /* Thin look for the icon */
-        /* You can replace these simple text characters with proper SVG icons 
-           for higher fidelity, but this gives the linear effect. */
+        opacity: 0.8;
+        font-weight: 300;
     }
 
-    nav a:hover {
-        color: #007aff; /* Clean blue hover effect */
+    nav a:hover, nav a.active {
+        color: #007aff;
         opacity: 1; 
-        border-bottom: none; 
     }
-    
-    /* ... The rest of the original CSS follows, ensuring all non-header styles are preserved ... */
 
     .hero {
         position: relative;
@@ -239,6 +207,9 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
         border: 1px solid #e0e0e0;
+        text-decoration: none;
+        color: inherit;
+        display: block;
     }
 
     .topic-card:hover {
@@ -296,6 +267,9 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
         border: 1px solid #e0e0e0;
+        text-decoration: none;
+        color: inherit;
+        display: block;
     }
 
     .post-item:hover {
@@ -313,13 +287,13 @@
     }
     
     .post-thumbnail.hugelkultur { 
-        background-image: url('[INSERT SOIL IMAGE URL HERE]');
+        background-image: url('https://via.placeholder.com/400x200/8b7355/ffffff?text=Hugelkultur');
     }
     .post-thumbnail.rabbits { 
-        background-image: url('[INSERT RABBIT IMAGE URL HERE]');
+        background-image: url('https://via.placeholder.com/400x200/d4a574/ffffff?text=Rabbits');
     }
     .post-thumbnail.grazing { 
-        background-image: url('[INSERT CHICKEN IMAGE URL HERE]');
+        background-image: url('https://via.placeholder.com/400x200/a9c298/ffffff?text=Rotational+Grazing');
     }
 
     .post-content {
@@ -358,6 +332,68 @@
         color: #1a4314;
     }
 
+    /* Page-specific styles */
+    .page-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 25px;
+    }
+
+    .page-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 3rem 0;
+        background: linear-gradient(135deg, #386641 0%, #799a5e 100%);
+        color: white;
+    }
+
+    .page-header h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .page-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    .blog-article {
+        background: white;
+        padding: 3rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        margin-bottom: 3rem;
+    }
+
+    .blog-article h3 {
+        font-size: 2rem;
+        margin: 2rem 0 1rem;
+        color: #1a4314;
+    }
+
+    .blog-article h4 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 1rem;
+        color: #386641;
+    }
+
+    .blog-article p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #444;
+    }
+
+    .blog-article ul, .blog-article ol {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+    }
+
+    .blog-article li {
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+    }
+
     footer {
         background-color: #1a4314; 
         color: #e0e6e0;
@@ -392,68 +428,35 @@
         border-color: #799a5e;
     }
 
-    /* Media Queries remain largely the same, ensuring responsiveness */
-    @media (max-width: 992px) {
-        .hero {
-            height: 500px;
-        }
-        .hero h2 {
-            font-size: 3.5rem;
-        }
-        .section-title {
-            font-size: 2.2rem;
-        }
+    .page {
+        display: none;
     }
+
+    .page.active {
+        display: block;
+    }
+
     @media (max-width: 768px) {
-        /* Mobile layout: logo and navigation stack vertically and center */
         .header-content {
             flex-direction: column;
             gap: 1rem;
-            max-width: 100%;
-        }
-        .logo {
-            order: -1; 
-        }
-        .logo h1 {
-            font-size: 1.5rem;
         }
         nav ul {
             gap: 1rem;
             flex-wrap: wrap;
             justify-content: center;
         }
-        nav a {
-            font-size: 0.9rem;
-            padding: 0.5rem 0;
-        }
         .hero {
             height: 400px;
-            padding: 3rem 1rem;
         }
         .hero h2 {
             font-size: 2.5rem;
         }
-        .hero p {
-            font-size: 1.1rem;
-        }
-        .cta-button {
-            padding: 1rem 1.8rem;
-            font-size: 1rem;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 3rem;
-        }
-        .topic-grid, .post-list {
-            grid-template-columns: 1fr;
-        }
-    }
-    @media (max-width: 480px) {
-        .hero h2 {
+        .page-header h2 {
             font-size: 2rem;
         }
-        .hero p {
-            font-size: 1rem;
+        .blog-article {
+            padding: 1.5rem;
         }
     }
 </style>
@@ -462,130 +465,784 @@
     <header>
         <div class="container header-content">
             <div class="logo">
-                <h1>Uncle's Fresh Farm</h1>
+                <h1 onclick="showPage('home')">Uncle's Fresh Farm</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home"><span class="icon">⌂</span> Home</a></li>
-                    <li><a href="#guides"><span class="icon">▤</span> Guides</a></li>
-                    <li><a href="#blog"><span class="icon">📰</span> Blog</a></li>
-                    <li><a href="#contact"><span class="icon">✉</span> Contact</a></li>
+                    <li><a href="#home" onclick="showPage('home')" class="nav-link"><span class="icon">⌂</span> Home</a></li>
+                    <li><a href="#guides" onclick="showPage('guides')" class="nav-link"><span class="icon">▤</span> Guides</a></li>
+                    <li><a href="#blog" onclick="showPage('blog')" class="nav-link"><span class="icon">📰</span> Blog</a></li>
+                    <li><a href="#contact" onclick="showPage('contact')" class="nav-link"><span class="icon">✉</span> Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-background"></div>
-            <div class="hero-content">
-                <h2>Cultivate Your Dreams: Life on Uncle's Fresh Farm</h2>
-                <p>Discover the joy and fulfillment of sustainable living. Expert guides, inspiring stories, and practical advice for every homesteader.</p>
-                <a href="#guides" class="cta-button">EXPLORE GUIDES & RESOURCES →</a>
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <main>
+            <section class="hero">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <h2>Cultivate Your Dreams: Life on Uncle's Fresh Farm</h2>
+                    <p>Discover the joy and fulfillment of sustainable living. Expert guides, inspiring stories, and practical advice for every homesteader.</p>
+                    <a href="#guides" onclick="showPage('guides')" class="cta-button">EXPLORE GUIDES & RESOURCES →</a>
+                </div>
+            </section>
+
+            <div class="container">
+                <section class="features">
+                    <h3 class="section-title">Your Path to a Thriving Homestead</h3>
+                    <div class="topic-grid">
+                        <a href="#gardening" onclick="showPage('gardening')" class="topic-card">
+                            <div class="topic-image gardening"></div>
+                            <div class="topic-content">
+                                <h4>Organic Vegetable Gardening</h4>
+                                <p>Unlock the secrets to bountiful harvests with natural methods, composting, and companion planting.</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#poultry" onclick="showPage('poultry')" class="topic-card">
+                            <div class="topic-image poultry"></div>
+                            <div class="topic-content">
+                                <h4>Backyard Poultry & Eggs</h4>
+                                <p>Raise healthy chickens, ducks, or quail for fresh eggs and sustainable meat. Coops, feed, and care.</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#sunflower" onclick="showPage('sunflower')" class="topic-card">
+                            <div class="topic-image dairy"></div>
+                            <div class="topic-content">
+                                <h4>Sunflower Cultivation & Harvest</h4>
+                                <p>Master the art of growing stunning sunflowers for seeds, oil, and natural beauty while attracting beneficial pollinators.</p>
+                            </div>
+                        </a>
+
+                        <a href="#permaculture" onclick="showPage('permaculture')" class="topic-card">
+                            <div class="topic-image permaculture"></div>
+                            <div class="topic-content">
+                                <h4>Permaculture & Soil Health</h4>
+                                <p>Design regenerative systems that mimic nature, build fertile soil, and create self-sustaining ecosystems.</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#livestock" onclick="showPage('livestock')" class="topic-card">
+                            <div class="topic-image livestock"></div>
+                            <div class="topic-content">
+                                <h4>Small Livestock Management</h4>
+                                <p>Comprehensive guides on raising rabbits, pigs, and other small-scale animals for diversified homestead needs.</p>
+                            </div>
+                        </a>
+
+                        <a href="#self-sufficiency" onclick="showPage('self-sufficiency')" class="topic-card">
+                            <div class="topic-image self-sufficiency"></div>
+                            <div class="topic-content">
+                                <h4>Self-Sufficiency & Preparedness</h4>
+                                <p>Learn vital skills for energy independence, water conservation, food preservation, and resilient living.</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                
+                <section class="latest-posts">
+                    <h3 class="section-title">Latest Inspiration from the Farm Blog</h3>
+                    <div class="post-list">
+                        <a href="#hugelkultur" onclick="showPage('hugelkultur')" class="post-item">
+                            <div class="post-thumbnail hugelkultur"></div>
+                            <div class="post-content">
+                                <h4>Building a Hugelkultur Bed for Water Retention</h4>
+                                <p class="date">September 2025</p>
+                                <p>Discover how this ancient technique can revolutionize your garden's water efficiency and soil fertility.</p>
+                                <span class="read-more">Read Full Post →</span>
+                            </div>
+                        </a>
+                        
+                        <a href="#rabbits" onclick="showPage('rabbits')" class="post-item">
+                            <div class="post-thumbnail rabbits"></div>
+                            <div class="post-content">
+                                <h4>Is Raising Meat Rabbits Right for Your Family?</h4>
+                                <p class="date">September 2025</p>
+                                <p>A balanced look at the benefits and considerations of integrating rabbits into your homestead's protein production.</p>
+                                <span class="read-more">Read Full Post →</span>
+                            </div>
+                        </a>
+                        
+                        <a href="#grazing" onclick="showPage('grazing')" class="post-item">
+                            <div class="post-thumbnail grazing"></div>
+                            <div class="post-content">
+                                <h4>A Beginner's Guide to Rotational Grazing for Chickens</h4>
+                                <p class="date">September 2025</p>
+                                <p>Boost flock health, control pests, and enrich your soil with this simple yet powerful pasturing strategy.</p>
+                                <span class="read-more">Read Full Post →</span>
+                            </div>
+                        </a>
+                    </div>
+                </section>
             </div>
-        </section>
+        </main>
+    </div>
 
-        <div class="container">
-            <section class="features" id="guides">
-                <h3 class="section-title">Your Path to a Thriving Homestead</h3>
-                <div class="topic-grid">
-                    
-                    <div class="topic-card">
-                        <div class="topic-image gardening"></div>
-                        <div class="topic-content">
-                            <h4>Organic Vegetable Gardening</h4>
-                            <p>Unlock the secrets to bountiful harvests with natural methods, composting, and companion planting.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="topic-card">
-                        <div class="topic-image poultry"></div>
-                        <div class="topic-content">
-                            <h4>Backyard Poultry & Eggs</h4>
-                            <p>Raise healthy chickens, ducks, or quail for fresh eggs and sustainable meat. Coops, feed, and care.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="topic-card">
-                        <div class="topic-image dairy"></div>
-                        <div class="topic-content">
-                            <h4>Sunflower Cultivation & Harvest</h4>
-                            <p>Master the art of growing stunning sunflowers for seeds, oil, and natural beauty while attracting beneficial pollinators.</p>
-                        </div>
-                    </div>
-
-                    <div class="topic-card">
-                        <div class="topic-image permaculture"></div>
-                        <div class="topic-content">
-                            <h4>Permaculture & Soil Health</h4>
-                            <p>Design regenerative systems that mimic nature, build fertile soil, and create self-sustaining ecosystems.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="topic-card">
-                        <div class="topic-image livestock"></div>
-                        <div class="topic-content">
-                            <h4>Small Livestock Management</h4>
-                            <p>Comprehensive guides on raising rabbits, pigs, and other small-scale animals for diversified homestead needs.</p>
-                        </div>
-                    </div>
-
-                    <div class="topic-card">
-                        <div class="topic-image self-sufficiency"></div>
-                        <div class="topic-content">
-                            <h4>Self-Sufficiency & Preparedness</h4>
-                            <p>Learn vital skills for energy independence, water conservation, food preservation, and resilient living.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="latest-posts" id="blog">
-                <h3 class="section-title">Latest Inspiration from the Farm Blog</h3>
-                <div class="post-list">
-                    <article class="post-item">
-                        <div class="post-thumbnail hugelkultur"></div>
-                        <div class="post-content">
-                            <h4>Building a Hugelkultur Bed for Water Retention</h4>
-                            <p class="date">Article Coming Soon</p>
-                            <p>Discover how this ancient technique can revolutionize your garden's water efficiency and soil fertility.</p>
-                            <a href="#" class="read-more">Read Full Post →</a>
-                        </div>
-                    </article>
-                    
-                    <article class="post-item">
-                        <div class="post-thumbnail rabbits"></div>
-                        <div class="post-content">
-                            <h4>Is Raising Meat Rabbits Right for Your Family?</h4>
-                            <p class="date">Article Coming Soon</p>
-                            <p>A balanced look at the benefits and considerations of integrating rabbits into your homestead's protein production.</p>
-                            <a href="#" class="read-more">Read Full Post →</a>
-                        </div>
-                    </article>
-                    
-                    <article class="post-item">
-                        <div class="post-thumbnail grazing"></div>
-                        <div class="post-content">
-                            <h4>A Beginner's Guide to Rotational Grazing for Chickens</h4>
-                            <p class="date">Article Coming Soon</p>
-                            <p>Boost flock health, control pests, and enrich your soil with this simple yet powerful pasturing strategy.</p>
-                            <a href="#" class="read-more">Read Full Post →</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
+    <!-- GUIDES PAGE -->
+    <div id="guides" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Complete Homesteading Guides</h2>
+                <p>In-depth resources for every aspect of sustainable living</p>
+            </div>
         </div>
-    </main>
+        <div class="container">
+            <div class="topic-grid">
+                <a href="#gardening" onclick="showPage('gardening')" class="topic-card">
+                    <div class="topic-image gardening"></div>
+                    <div class="topic-content">
+                        <h4>Organic Vegetable Gardening</h4>
+                        <p>Unlock the secrets to bountiful harvests with natural methods, composting, and companion planting.</p>
+                    </div>
+                </a>
+                
+                <a href="#poultry" onclick="showPage('poultry')" class="topic-card">
+                    <div class="topic-image poultry"></div>
+                    <div class="topic-content">
+                        <h4>Backyard Poultry & Eggs</h4>
+                        <p>Raise healthy chickens, ducks, or quail for fresh eggs and sustainable meat.</p>
+                    </div>
+                </a>
+                
+                <a href="#sunflower" onclick="showPage('sunflower')" class="topic-card">
+                    <div class="topic-image dairy"></div>
+                    <div class="topic-content">
+                        <h4>Sunflower Cultivation</h4>
+                        <p>Master the art of growing stunning sunflowers for seeds, oil, and beauty.</p>
+                    </div>
+                </a>
+
+                <a href="#permaculture" onclick="showPage('permaculture')" class="topic-card">
+                    <div class="topic-image permaculture"></div>
+                    <div class="topic-content">
+                        <h4>Permaculture & Soil Health</h4>
+                        <p>Design regenerative systems that mimic nature and build fertile soil.</p>
+                    </div>
+                </a>
+                
+                <a href="#livestock" onclick="showPage('livestock')" class="topic-card">
+                    <div class="topic-image livestock"></div>
+                    <div class="topic-content">
+                        <h4>Small Livestock Management</h4>
+                        <p>Comprehensive guides on raising rabbits, pigs, and small-scale animals.</p>
+                    </div>
+                </a>
+
+                <a href="#self-sufficiency" onclick="showPage('self-sufficiency')" class="topic-card">
+                    <div class="topic-image self-sufficiency"></div>
+                    <div class="topic-content">
+                        <h4>Self-Sufficiency & Preparedness</h4>
+                        <p>Learn vital skills for energy independence and resilient living.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG PAGE -->
+    <div id="blog" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Farm Blog & Stories</h2>
+                <p>Real experiences, practical tips, and inspiration from the homestead</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="post-list">
+                <a href="#hugelkultur" onclick="showPage('hugelkultur')" class="post-item">
+                    <div class="post-thumbnail hugelkultur"></div>
+                    <div class="post-content">
+                        <h4>Building a Hugelkultur Bed for Water Retention</h4>
+                        <p class="date">September 2025</p>
+                        <p>Discover how this ancient technique can revolutionize your garden's water efficiency and soil fertility.</p>
+                        <span class="read-more">Read Full Post →</span>
+                    </div>
+                </a>
+                
+                <a href="#rabbits" onclick="showPage('rabbits')" class="post-item">
+                    <div class="post-thumbnail rabbits"></div>
+                    <div class="post-content">
+                        <h4>Is Raising Meat Rabbits Right for Your Family?</h4>
+                        <p class="date">September 2025</p>
+                        <p>A balanced look at the benefits and considerations of integrating rabbits into your homestead.</p>
+                        <span class="read-more">Read Full Post →</span>
+                    </div>
+                </a>
+                
+                <a href="#grazing" onclick="showPage('grazing')" class="post-item">
+                    <div class="post-thumbnail grazing"></div>
+                    <div class="post-content">
+                        <h4>A Beginner's Guide to Rotational Grazing for Chickens</h4>
+                        <p class="date">September 2025</p>
+                        <p>Boost flock health, control pests, and enrich your soil with this powerful strategy.</p>
+                        <span class="read-more">Read Full Post →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>Join our community of passionate homesteaders</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>Connect With Uncle's Fresh Farm</h3>
+                <p>We love hearing from fellow homesteaders, gardeners, and anyone interested in sustainable living. Whether you have questions about starting your own farm, want to share your experiences, or just want to say hello, we'd love to connect with you!</p>
+                
+                <h4>Newsletter</h4>
+                <p>Join our weekly newsletter for exclusive tips, seasonal guides, and early access to new content. Get practical advice delivered straight to your inbox every Sunday morning.</p>
+                
+                <h4>Social Media</h4>
+                <p>Follow along with our daily farm adventures on Instagram and Facebook. We share behind-the-scenes glimpses of farm life, quick tips, and answer your questions in real-time.</p>
+                
+                <ul>
+                    <li><strong>Instagram:</strong> @unclesfreshfarm - Daily photos and stories from the homestead</li>
+                    <li><strong>Facebook:</strong> Uncle's Fresh Farm Community - Join discussions and share your own experiences</li>
+                    <li><strong>Email:</strong> hello@unclesfreshfarm.com - For collaboration inquiries and detailed questions</li>
+                </ul>
+                
+                <h4>Collaboration Opportunities</h4>
+                <p>We're always interested in connecting with brands, fellow bloggers, and organizations that share our values of sustainability and self-sufficiency. If you'd like to collaborate, please reach out via email.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GARDENING GUIDE -->
+    <div id="gardening" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Organic Vegetable Gardening</h2>
+                <p>Your complete guide to natural, bountiful harvests</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>Growing Your Own Food: The Foundation of Homesteading</h3>
+                <p>There's nothing quite like the satisfaction of harvesting vegetables you've grown with your own hands. Organic vegetable gardening isn't just about producing food—it's about reconnecting with natural cycles, building healthy soil, and creating a sustainable food system right in your backyard.</p>
+                
+                <h4>Getting Started: Planning Your Garden</h4>
+                <p>Before you dig your first bed, take time to observe your space. The most successful gardens are designed with careful attention to sunlight patterns, water access, and soil conditions. Most vegetables need at least six to eight hours of direct sunlight daily, so identify the sunniest spots on your property first.</p>
+                
+                <p>Start small if you're new to gardening. A well-maintained 10x10 foot bed can produce an impressive amount of food and is much more manageable than an overly ambitious plot that becomes overwhelming. As you gain confidence and understand your capacity, you can always expand.</p>
+                
+                <h4>Soil: The Living Foundation</h4>
+                <p>Healthy soil is the cornerstone of organic gardening. Rather than viewing soil as just a growing medium, think of it as a living ecosystem teeming with beneficial microorganisms, fungi, earthworms, and countless other organisms that work together to nourish your plants.</p>
+                
+                <p>Building great soil takes time, but the investment pays dividends for years. Start by testing your soil's pH and nutrient levels—many agricultural extension offices offer this service for free or at minimal cost. Most vegetables prefer a slightly acidic to neutral pH between 6.0 and 7.0.</p>
+                
+                <p>Regardless of your starting point, you can improve your soil by adding organic matter. Compost is gardening gold—it improves soil structure, adds nutrients, enhances water retention in sandy soils, and improves drainage in clay soils. Add a two to three-inch layer of compost to your beds each season, and watch your soil transform.</p>
+                
+                <h4>Companion Planting Strategies</h4>
+                <p>Companion planting is one of nature's elegant solutions to garden challenges. Certain plant combinations naturally support each other, deterring pests, improving pollination, and maximizing space efficiency.</p>
+                
+                <p>The classic "Three Sisters" combination—corn, beans, and squash—demonstrates this beautifully. Corn provides a natural trellis for beans, beans fix nitrogen in the soil benefiting all three plants, and squash leaves shade the ground keeping it cool and moist while deterring weeds.</p>
+                
+                <p>Other powerful combinations include tomatoes with basil (which may improve flavor and repel aphids), carrots with onions (onions deter carrot flies), and marigolds planted throughout the garden to repel various pests while attracting beneficial insects.</p>
+                
+                <h4>Natural Pest Management</h4>
+                <p>Organic gardening doesn't mean sacrificing your harvest to pests. It means working with nature's balance rather than against it. The healthiest gardens support both pests and their predators, maintaining an equilibrium that prevents any single pest from devastating your crops.</p>
+                
+                <p>Encourage beneficial insects by planting flowers throughout your vegetable garden. Ladybugs, lacewings, and parasitic wasps are voracious predators of common garden pests. Flowering herbs like dill, fennel, and yarrow attract these helpful allies.</p>
+                
+                <p>When pest pressure does build, start with the gentlest interventions. Hand-picking larger pests like tomato hornworms or squash bugs, using row covers to exclude pests, and applying organic sprays like neem oil or insecticidal soap only when necessary.</p>
+                
+                <h4>Seasonal Succession Planting</h4>
+                <p>Maximize your garden's productivity by planting in succession. Rather than planting all your lettuce at once, sow small amounts every two weeks for a continuous harvest. As early spring crops finish, replace them with warm-season vegetables, then transition to fall crops as summer wanes.</p>
+                
+                <p>This approach keeps your beds productive year-round in many climates and ensures you're not overwhelmed with a single vegetable all at once. Few families need fifty heads of lettuce simultaneously, but a steady supply throughout the season is invaluable.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- POULTRY GUIDE -->
+    <div id="poultry" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Backyard Poultry & Eggs</h2>
+                <p>Complete guide to raising healthy, productive chickens</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>The Joy of Fresh Eggs: Getting Started with Backyard Chickens</h3>
+                <p>Few homesteading additions are as rewarding as a small flock of backyard chickens. They provide fresh eggs daily, create valuable compost, control pests, and add life and personality to your homestead. Chickens are often called the "gateway livestock" because they're relatively easy to care for while offering immediate, tangible benefits.</p>
+                
+                <h4>Choosing Your Flock</h4>
+                <p>Start with three to six hens for a family of four. This number provides enough eggs for regular use without overwhelming you. Roosters aren't necessary for egg production—hens lay unfertilized eggs regularly—but they do provide flock protection and are required if you want to hatch chicks.</p>
+                
+                <p>Breed selection depends on your priorities. Dual-purpose breeds like Rhode Island Reds, Plymouth Rocks, and Orpingtons are excellent for beginners, offering both good egg production and reasonable meat if you choose to process older hens. For maximum egg production, consider Leghorns or Sex Links. If cold hardiness is important, Wyandottes and Brahmas excel in winter conditions.</p>
+                
+                <h4>Housing Requirements</h4>
+                <p>Your coop doesn't need to be elaborate, but it must be secure, well-ventilated, and appropriately sized. Plan for three to four square feet per bird inside the coop and eight to ten square feet per bird in the run. Chickens are surprisingly hardy regarding temperature, but they're vulnerable to drafts, moisture, and predators.</p>
+                
+                <p>Ventilation is crucial and often overlooked. Chickens produce significant moisture through respiration and droppings. Without adequate airflow, this moisture creates ammonia buildup and respiratory problems. Install vents near the roof line to allow hot, moist air to escape while keeping the flock protected from drafts at bird level.</p>
+                
+                <p>Predator protection is non-negotiable. Raccoons, foxes, weasels, hawks, and even domestic dogs pose serious threats. Use hardware cloth (not chicken wire, which predators can tear) on all openings, bury it at least 12 inches deep or use an apron extending outward to prevent digging, and secure your coop with predator-proof latches.</p>
+                
+                <h4>Feeding for Health and Production</h4>
+                <p>Layer feed should form the foundation of your flock's diet, providing balanced nutrition for consistent egg production. Choose a complete layer feed with 16-18% protein and allow free-choice access. Chickens are excellent self-regulators and will eat what they need.</p>
+                
+                <p>Supplement with kitchen scraps, garden waste, and pasture access when possible. Chickens are omnivores and benefit from diverse diets including greens, insects, fruits, and vegetables. However, avoid feeding chocolate, avocado, raw beans, or heavily processed foods.</p>
+                
+                <p>Provide oyster shell or crushed eggshells free-choice in a separate container. Hens need substantial calcium for strong eggshells, and offering it separately allows them to consume what they need without forcing it on non-laying birds or those with lower requirements.</p>
+                
+                <h4>Daily Care Routine</h4>
+                <p>Chickens thrive on routine. Morning chores include opening the coop, checking water (fresh, clean water is critical), and collecting eggs. Evening involves closing the coop securely after the flock has roosted for the night. Weekly tasks include cleaning waterers, refilling feeders, and collecting soiled bedding for compost. Monthly deep cleaning keeps the coop healthy and pleasant.</p>
+                
+                <p>Monitor your flock's health daily. Healthy chickens are active, alert, and have bright eyes and smooth feathers. Learn to recognize signs of illness early—lethargy, reduced appetite, labored breathing, or changes in droppings—so you can address problems quickly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUNFLOWER GUIDE -->
+    <div id="sunflower" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Sunflower Cultivation & Harvest</h2>
+                <p>Growing stunning sunflowers for beauty, seeds, and pollinators</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>Sunflowers: Beauty and Bounty in Your Garden</h3>
+                <p>Sunflowers embody the abundance and joy of homesteading. These cheerful giants not only brighten your landscape but also provide valuable seeds, attract beneficial pollinators, and can even be processed into oil. Whether you're growing them for their stunning blooms, nutritious seeds, or wildlife value, sunflowers are remarkably rewarding and surprisingly easy to cultivate.</p>
+                
+                <h4>Selecting the Right Varieties</h4>
+                <p>Sunflowers come in amazing diversity beyond the classic tall yellow giants. For seed production, choose large-headed varieties like Mammoth Russian or Titan, which produce abundant seeds perfect for eating or pressing into oil. These varieties can reach 10-12 feet tall with dinner-plate-sized flower heads.</p>
+                
+                <p>If you're interested in beauty and cut flowers, consider branching varieties like Autumn Beauty or Velvet Queen, which produce multiple smaller blooms per plant in gorgeous colors ranging from deep burgundy to pale lemon. These are perfect for arrangements and extend the flowering season.</p>
+                
+                <p>For small spaces or containers, dwarf varieties like Sunspot or Teddy Bear provide full sunflower charm in compact plants just 2-3 feet tall.</p>
+                
+                <h4>Planting for Success</h4>
+                <p>Sunflowers are sun worshippers—plant them where they'll receive full, direct sunlight for at least six to eight hours daily. They're remarkably unfussy about soil quality, tolerating poor soil better than many crops, though they'll produce larger heads and more seeds in fertile, well-drained soil.</p>
+                
+                <p>Direct seed sunflowers after the last frost date when soil has warmed to at least 50°F. Plant seeds one inch deep and six inches apart, then thin to 12-24 inches apart depending on variety size. Sunflowers don't transplant well due to sensitive taproots, so direct seeding is almost always the best approach.</p>
+                
+                <p>For continuous blooms, practice succession planting by sowing new seeds every two weeks through early summer. This extends your flowering season and seed harvest from midsummer through fall.</p>
+                
+                <h4>Care and Maintenance</h4>
+                <p>Once established, sunflowers are remarkably drought-tolerant thanks to their deep taproots. Water deeply but infrequently, encouraging roots to grow downward. Young seedlings need more consistent moisture, but mature plants only require watering during extended dry periods.</p>
+                
+                <p>Tall varieties may need staking in windy locations. Install stakes when plants are young to avoid damaging established roots. Alternatively, plant sunflowers along fence lines or in sheltered locations where they're naturally protected from strong winds.</p>
+                
+                <p>Sunflowers generally don't require fertilization if planted in reasonably healthy soil. Excessive nitrogen actually reduces seed production while promoting lush foliage growth.</p>
+                
+                <h4>Harvesting Seeds</h4>
+                <p>Seed harvest timing is crucial. Watch for these signs of readiness: the back of the flower head turns from green to yellow-brown, petals dry and drop, and seeds' hulls develop their characteristic stripes. At this point, seeds are mature but still moist.</p>
+                
+                <p>You have two harvest options. Cut heads when seeds are mature but before they dry completely, leaving 12 inches of stem attached. Hang heads in a warm, dry location with good airflow until completely dry. Alternatively, leave heads on stalks to dry completely, covering them with paper bags or netting to protect from birds.</p>
+                
+                <p>Once dry, remove seeds by rubbing them from the head. Winnow away debris by pouring seeds between containers in a gentle breeze or in front of a fan. Store properly dried seeds in airtight containers in a cool, dark location where they'll keep for months.</p>
+                
+                <h4>Wildlife and Pollinator Benefits</h4>
+                <p>Sunflowers support incredible biodiversity. Their pollen and nectar attract over 70 species of native bees along with butterflies and beneficial insects. As seeds mature, birds including goldfinches, chickadees, and cardinals feast on the bounty. Consider leaving some heads unharvested specifically for wildlife—it's wonderful to watch goldfinches perform acrobatics while extracting seeds.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERMACULTURE GUIDE -->
+    <div id="permaculture" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Permaculture & Soil Health</h2>
+                <p>Designing regenerative systems that work with nature</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>Permaculture: Designing Abundance Through Natural Patterns</h3>
+                <p>Permaculture represents a paradigm shift in how we approach food production and land management. Rather than imposing our will on the land through constant intervention, permaculture designs work with natural patterns and processes to create productive, self-maintaining systems. The result is landscapes that become more abundant and resilient over time while requiring less input from us.</p>
+                
+                <h4>Core Permaculture Principles</h4>
+                <p>At its heart, permaculture asks us to observe before we act. Spend a full year watching your land through all seasons before making major changes. Notice where water flows, which areas receive full sun or shade, where wind is strongest, and how the land naturally wants to function.</p>
+                
+                <p>The principle of stacking functions means every element should serve multiple purposes. A chicken coop isn't just housing for birds—it's also a compost generator, pest control system, fertilizer factory, and potential heat source for an attached greenhouse. A pond provides water for irrigation, supports aquatic food production, moderates temperature, creates habitat, and offers fire protection.</p>
+                
+                <p>Design from patterns to details. Natural systems exhibit patterns—branching like trees and rivers, spirals like shells and galaxies, waves like wind and water. Incorporating these patterns into your design creates efficiency and beauty. A spiral herb garden maximizes edge space while keeping frequently used herbs closest to the path.</p>
+                
+                <h4>Building Soil: The Permaculture Foundation</h4>
+                <p>Healthy soil is the foundation of any permaculture system. Rather than tilling and fighting soil structure, permaculture builds soil through minimal disturbance and continuous organic matter addition.</p>
+                
+                <p>Sheet mulching, also called lasagna gardening, transforms lawn or poor soil into productive growing space without tilling. Layer cardboard or newspaper over existing vegetation, then alternate layers of nitrogen-rich materials (grass clippings, kitchen scraps, manure) with carbon-rich materials (leaves, straw, wood chips). This mimics forest floor processes, building rich soil while smothering weeds.</p>
+                
+                <p>Compost systems should be integrated throughout your design, not relegated to a distant corner. Place compost near the kitchen for convenient scrap disposal, near chicken coops for easy manure addition, and within gardens for direct application. Multiple small compost stations are often more practical than one large pile.</p>
+                
+                <h4>Water Management Strategies</h4>
+                <p>In permaculture, water is harvested, slowed, spread, and sunk into the landscape rather than allowed to run off. Start at the highest point of your property and work downward, creating systems that capture and utilize water at multiple points.</p>
+                
+                <p>Swales—level ditches on contour—are among permaculture's most powerful tools. Water running downslope hits the swale and spreads along its length, sinking into the landscape rather than eroding soil and carrying away nutrients. Trees and perennials planted on swale mounds access this stored water during dry periods.</p>
+                
+                <p>Contour planting follows this same principle. Plant rows following the land's contours rather than running up and down slopes. This slows water flow, reduces erosion, and gives plants better access to moisture.</p>
+                
+                <h4>Guild Planting and Food Forests</h4>
+                <p>A guild is a community of plants that support each other, similar to companion planting but more comprehensive. A fruit tree guild might include nitrogen-fixing shrubs, dynamic accumulators that mine minerals from deep soil, aromatic herbs that confuse pests, flowers that attract beneficials, and groundcovers that suppress weeds while providing additional yields.</p>
+                
+                <p>Food forests take guild planting to its logical conclusion, creating edible landscapes that mimic forest structure and function. The canopy layer might include fruit and nut trees, the understory features smaller fruit trees and large shrubs, the shrub layer provides berries, the herbaceous layer offers vegetables and herbs, groundcovers suppress weeds while producing food, and the rhizosphere includes root crops and fungi.</p>
+                
+                <p>Once established, food forests require minimal maintenance while producing abundant, diverse yields. They're particularly valuable for homesteaders who want production but can't dedicate hours daily to vegetable garden maintenance.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIVESTOCK GUIDE -->
+    <div id="livestock" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Small Livestock Management</h2>
+                <p>Comprehensive guides for diversified animal husbandry</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>Beyond Chickens: Diversifying Your Homestead with Small Livestock</h3>
+                <p>Once you've mastered backyard chickens, you might consider expanding into other small livestock. Rabbits, quail, ducks, and small pigs each offer unique advantages for the homesteader seeking greater self-sufficiency. These animals can be managed on relatively small properties while providing meat, eggs, fiber, or other valuable products.</p>
+                
+                <h4>Meat Rabbits: Efficient Protein Production</h4>
+                <p>Rabbits are remarkably efficient converters of feed to meat, requiring far less space and resources than traditional livestock. A breeding trio (one buck and two does) can produce 200+ pounds of meat annually in a space no larger than a garden shed.</p>
+                
+                <p>Choose meat breeds like New Zealand Whites, Californians, or Silver Fox for best results. These breeds reach processing weight of 5 pounds in just 8-10 weeks. Housing can be simple—hutches or colony systems both work well, though each has advantages. Hutches offer easier management and sanitation, while colonies allow more natural behavior.</p>
+                
+                <p>Rabbits thrive on a simple diet of quality pellets supplemented with hay and garden greens. They're quiet, gentle, and their manure is among the finest garden fertilizers—it can be applied directly without composting, unlike most animal manures which require aging.</p>
+                
+                <p>The main consideration with meat rabbits is processing. Unlike sending chickens to a processor, most homesteaders process rabbits on-farm. This requires learning proper techniques and developing comfort with the harvest process. Many find rabbit meat exceptionally mild and versatile, similar to chicken but with a slightly richer flavor.</p>
+                
+                <h4>Quail: Maximum Production, Minimum Space</h4>
+                <p>If space is extremely limited, quail might be your perfect livestock. Coturnix quail reach laying age in just six weeks and produce tiny, nutritious eggs prolifically. A small flock can be housed in a few square feet, making them ideal for urban or suburban settings.</p>
+                
+                <p>Quail are quieter than chickens (important for neighbor relations) and their small size means processing is less daunting for beginners. The meat is delicious—dark, rich, and considered gourmet in many cuisines.</p>
+                
+                <p>However, quail do have specific needs. They require higher protein feeds than chickens, are more fragile, and don't forage like chickens do. They're best viewed as production animals rather than dual-purpose homestead creatures. But for sheer egg and meat production per square foot, few animals rival quail efficiency.</p>
+                
+                <h4>Ducks: Hardy, Productive, and Entertaining</h4>
+                <p>Ducks are often overlooked in favor of chickens, but they offer distinct advantages. Duck eggs are larger, richer, and prized by bakers for their superior properties in pastries and cakes. Ducks are also hardier than chickens, more cold-tolerant, and less susceptible to many common poultry diseases.</p>
+                
+                <p>Breeds like Khaki Campbells and Welsh Harlequins can lay 300+ eggs annually, matching or exceeding chicken production. Pekins are excellent dual-purpose birds for both eggs and meat. Muscovy ducks are unique—technically not true ducks, they're quiet (they hiss rather than quack), excellent mothers, and produce lean, flavorful meat.</p>
+                
+                <p>Ducks don't require a pond, though they certainly enjoy water for swimming and mating. A kiddie pool refreshed regularly satisfies their needs. They're excellent foragers, particularly for slugs and snails, making them valuable pest control partners in the garden.</p>
+                
+                <p>The main drawbacks are messiness (ducks and water create mud) and their bills make them less precise foragers than chickens. Keep them out of young seedlings, but mature gardens benefit from their pest control abilities.</p>
+                
+                <h4>Kunekune Pigs: Small-Scale Pork Production</h4>
+                <p>For homesteaders with a bit more space, Kunekune pigs offer a manageable entry into pork production. These small, grazing pigs from New Zealand are significantly smaller than commercial breeds, with boars reaching only 200-250 pounds.</p>
+                
+                <p>Unlike conventional pigs that require primarily grain-based diets, Kunekunes are efficient grazers, deriving much of their nutrition from pasture. This makes them more economical to feed and better suited to sustainable homestead systems. They're also notably friendly and docile, with many homesteaders describing them as "dog-like" in personality.</p>
+                
+                <p>Pigs require sturdy fencing—their rooting instinct is powerful. Electric fence works well once they're trained. Provide shelter from sun and rain, as pigs lack efficient cooling mechanisms and sunburn easily. Access to wallows or sprinklers helps them regulate temperature in hot weather.</p>
+                
+                <p>The pork from heritage breeds like Kunekunes is markedly different from commercial pork—more marbled, flavorful, and rich. Processing requires more skill than poultry, so many homesteaders use mobile processing services or establish relationships with small local processors.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SELF-SUFFICIENCY GUIDE -->
+    <div id="self-sufficiency" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Self-Sufficiency & Preparedness</h2>
+                <p>Essential skills for resilient, independent living</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <h3>Building True Self-Sufficiency: Beyond the Garden</h3>
+                <p>Self-sufficiency isn't about isolation—it's about resilience. It's developing the skills, systems, and mindset to meet more of your needs directly while remaining connected to community and resources. True self-sufficiency means having options, understanding fundamental processes, and being capable rather than dependent.</p>
+                
+                <h4>Food Preservation: Extending the Harvest</h4>
+                <p>Growing food is only half the equation. Without proper preservation, you're limited to eating what's currently in season. Mastering multiple preservation methods ensures year-round access to your harvest and builds genuine food security.</p>
+                
+                <p>Canning is foundational for homesteaders. Water bath canning preserves high-acid foods like fruits, pickles, and tomatoes. Pressure canning is required for low-acid foods like vegetables, meats, and soups. Both methods, when done correctly, produce shelf-stable foods lasting years. Invest in quality equipment and follow tested recipes exactly—food safety isn't an area for experimentation.</p>
+                
+                <p>Fermentation adds probiotics while preserving. Sauerkraut, kimchi, pickles, and other fermented vegetables are simple to make, incredibly healthy, and develop complex flavors impossible to achieve through other methods. Fermentation requires only vegetables, salt, and time—no special equipment needed.</p>
+                
+                <p>Dehydration is among the most energy-efficient preservation methods. Sun drying works in hot, dry climates, while dehydrators or even your oven can dry produce anywhere. Dried foods store compactly and lightweight, ideal for limited storage space.</p>
+                
+                <p>Root cellaring utilizes cool, humid conditions to store fresh vegetables through winter without processing. Potatoes, carrots, beets, winter squash, and apples all store beautifully in proper conditions. Even a dedicated closet, basement corner, or buried container can function as a root cellar.</p>
+                
+                <h4>Water Security and Management</h4>
+                <p>Access to clean water is fundamental. Even if you're on municipal water, understanding alternatives and having backup systems builds resilience.</p>
+                
+                <p>Rainwater harvesting is legal in most areas (check local regulations) and remarkably simple. Gutters direct roof runoff into storage tanks. A 1,000 square foot roof can harvest 600 gallons from just one inch of rain. Use harvested water for gardens, livestock, and with proper filtration and treatment, even household needs.</p>
+                
+                <p>Well water provides independence from municipal systems. Drilling is expensive but offers long-term security. Hand pumps as backup for electric well pumps ensure water access during power outages—a critical consideration for homesteaders relying on well water.</p>
+                
+                <p>Water conservation is equally important as access. Low-flow fixtures, greywater systems reusing sink and shower water for irrigation, and drip irrigation in gardens all reduce consumption while maintaining productivity.</p>
+                
+                <h4>Energy Independence</h4>
+                <p>Complete energy independence is challenging and expensive, but reducing dependence is achievable for most homesteaders. Start by dramatically reducing consumption—better insulation, efficient appliances, LED lighting, and passive solar design cut energy needs by half or more.</p>
+                
+                <p>Solar panels have become increasingly affordable. Even a modest system can power critical loads during outages or offset significant portions of electric bills. Grid-tied systems with battery backup offer the benefits of both—you use solar when available, grid power as backup, and maintain power during outages.</p>
+                
+                <p>Wood heat is traditional for homesteaders with access to timber resources. Modern wood stoves are remarkably efficient, and wood is carbon-neutral when sustainably harvested. Rocket mass heaters take efficiency further, using minimal wood while providing steady, comfortable heat.</p>
+                
+                <h4>Essential Skills and Knowledge</h4>
+                <p>Self-sufficiency ultimately rests not on stuff but on knowledge and skill. Prioritize learning:</p>
+                
+                <ul>
+                    <li><strong>Basic carpentry and repair:</strong> Maintaining structures and equipment without calling professionals for every issue</li>
+                    <li><strong>Food production year-round:</strong> Season extension, greenhouse growing, and selecting appropriate varieties</li>
+                    <li><strong>Animal husbandry:</strong> Basic veterinary care, breeding management, and recognizing health issues</li>
+                    <li><strong>Foraging:</strong> Identifying wild edibles and medicinals in your region</li>
+                    <li><strong>Seed saving:</strong> Selecting, harvesting, and storing seeds from your best plants</li>
+                    <li><strong>Natural medicine:</strong> Using herbs and holistic approaches for common ailments</li>
+                    <li><strong>Financial skills:</strong> Budgeting, strategic purchasing, and building genuine wealth</li>
+                </ul>
+                
+                <p>True self-sufficiency is a journey, not a destination. Start with basics, build gradually, and focus on developing deep competence in a few areas rather than superficial knowledge across many. The goal isn't perfection but progress toward greater capability, confidence, and resilience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST: HUGELKULTUR -->
+    <div id="hugelkultur" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Building a Hugelkultur Bed</h2>
+                <p>Ancient technique for modern water retention</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <p class="date">September 2025 | By Uncle's Fresh Farm</p>
+                
+                <h3>Building a Hugelkultur Bed for Water Retention</h3>
+                <p>Last spring, I constructed my first hugelkultur bed, and the results have been remarkable. In a summer where we had less rainfall than usual, plants in the hugelkultur thrived while neighboring beds required constant watering. This ancient Eastern European technique is proving to be one of the most valuable additions to our farm's water management strategy.</p>
+                
+                <h4>What Exactly Is Hugelkultur?</h4>
+                <p>Hugelkultur translates roughly to "hill culture" or "mound culture" in German. The concept is beautifully simple: bury wood beneath your growing beds. As the wood slowly decomposes over years, it acts like a sponge, absorbing water during wet periods and releasing it slowly during dry spells. The decomposition process also generates heat and releases nutrients, creating ideal growing conditions.</p>
+                
+                <p>This isn't new technology—Eastern European farmers have practiced hugelkultur for centuries, building mounded beds that remain productive for decades without irrigation or fertilization. Now permaculture practitioners worldwide are rediscovering this elegant, low-tech solution to water management and soil building.</p>
+                
+                <h4>Building Your First Bed</h4>
+                <p>I started with a modest bed, 10 feet long, 4 feet wide, and about 3 feet tall at the peak. You can build directly on top of lawn or existing soil—no need to remove sod.</p>
+                
+                <p>The foundation layer consisted of logs and large branches I'd been stockpiling from tree trimming. Avoid black walnut, which contains juglone that inhibits many plants, and cedar or other rot-resistant woods that defeat the purpose. Fast-rotting woods like poplar, willow, or cottonwood are ideal, but I used whatever was available—mostly oak and maple.</p>
+                
+                <p>I arranged logs lengthwise, filling gaps between them with smaller branches and sticks. This base layer is crucial—it's what provides long-term water retention. Then came layers of upside-down sod (if you're covering lawn), manure or compost, leaves, grass clippings, more compost, and finally a thick layer of quality soil on top for planting.</p>
+                
+                <p>The whole process took about four hours and cost nothing—everything was material already on the property. Compare that to installing irrigation systems or constantly hauling water!</p>
+                
+                <h4>First Season Results</h4>
+                <p>I planted heavy feeders—tomatoes, squash, and cucumbers—knowing the decomposing wood would provide abundant nutrients. Growth was vigorous from the start. While I still watered during establishment, within a month the plants needed significantly less water than identical varieties in standard beds.</p>
+                
+                <p>During a two-week dry spell in July, I watched the hugelkultur bed carefully. The plants showed no stress while conventional beds wilted between waterings. The wood was doing its job, slowly releasing stored moisture to plant roots.</p>
+                
+                <p>Yields exceeded my expectations. Tomato plants grew eight feet tall (I should have provided taller stakes!), and squash production was prolific. The slight decomposition settling I'd read about occurred—the bed dropped about 6 inches over the season—but this just created more planting surface.</p>
+                
+                <h4>Lessons Learned</h4>
+                <p>If I were building another bed (and I am—three more are planned for next spring), I'd make a few adjustments:</p>
+                
+                <ul>
+                    <li>Pre-soak the wood thoroughly before building. Dry wood actually pulls moisture from soil initially</li>
+                    <li>Add extra nitrogen in the first year. Decomposing wood temporarily ties up nitrogen, so I'd incorporate more manure or use nitrogen-rich plants like peas as cover crops</li>
+                    <li>Build wider paths between beds. The raised mounds are harder to navigate than I anticipated</li>
+                    <li>Consider orientation carefully. My bed runs east-west, which creates a south-facing slope and north-facing slope with different microclimates—useful for diversifying plantings</li>
+                    <li>Install soaker hoses before adding the final soil layer for easy supplemental watering if needed</li>
+                </ul>
+                
+                <h4>Long-Term Potential</h4>
+                <p>The beauty of hugelkultur is that it improves over time. As wood continues decomposing, water retention increases and nutrient availability grows. These beds can remain productive for 20+ years with minimal inputs. In our region where water is becoming increasingly precious, creating growing systems that need less irrigation isn't just convenient—it's essential for long-term food security.</p>
+                
+                <p>I'm convinced this technique deserves a place on most homesteads, particularly in drier climates or areas with sandy soil that doesn't retain moisture well. The initial labor investment pays dividends for decades, and using material that might otherwise be burned or chipped adds satisfying efficiency to the whole operation.</p>
+                
+                <p>If you've been curious about hugelkultur, I encourage you to try one bed. Start small, observe the results, and adjust your technique. I suspect, like me, you'll soon be planning additional beds and wondering why you didn't discover this method years ago.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST: RABBITS -->
+    <div id="rabbits" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Raising Meat Rabbits</h2>
+                <p>A balanced perspective for your homestead</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <p class="date">September 2025 | By Uncle's Fresh Farm</p>
+                
+                <h3>Is Raising Meat Rabbits Right for Your Family?</h3>
+                <p>When we decided to add meat rabbits to our homestead two years ago, I spent months researching, visiting other rabbit operations, and honestly assessing whether this addition aligned with our goals and capabilities. Rabbits are often promoted as the perfect beginner livestock, but the reality is more nuanced. Here's what I wish someone had told me before we started.</p>
+                
+                <h4>The Compelling Case for Rabbits</h4>
+                <p>The advantages are real and significant. Rabbits convert feed to meat with remarkable efficiency—better than chickens, far better than pigs or cattle. Our breeding trio (one buck, two does) produces about 200 pounds of meat annually while consuming roughly 600 pounds of feed. That's impressive production from animals that require minimal space.</p>
+                
+                <p>Space efficiency is genuinely game-changing for small homesteads. Our entire rabbitry—six breeding animals plus grow-outs—occupies less than 100 square feet. You simply cannot produce comparable meat quantities from any other livestock in such compact space.</p>
+                
+                <p>The quiet nature matters more than I anticipated. Our neighbors don't even know we have rabbits. Compare this to roosters crowing or pigs squealing, and you understand why rabbits work in suburban and urban settings where other livestock can't.</p>
+                
+                <p>Rabbit manure is extraordinary. Unlike chicken or pig manure that requires aging, rabbit pellets can go directly on gardens without burning plants. We've eliminated our need for commercial fertilizer, and our soil quality has improved dramatically. This alone might justify keeping a few rabbits.</p>
+                
+                <h4>The Challenging Realities</h4>
+                <p>But rabbits aren't perfect, and some challenges caught me off-guard. The processing reality is unavoidable: you will almost certainly process rabbits yourself. There are virtually no rabbit processors, unlike chickens where you can often pay someone else to handle this task. If you're not comfortable with harvest and butchering, rabbits might not be your best choice.</p>
+                
+                <p>I found processing rabbits easier than chickens in some ways—no plucking, cleaner process, smaller size. But it's still a significant threshold to cross. We process in batches every 8-10 weeks, usually 10-15 rabbits at once. It takes most of a morning, and while I'm more comfortable with it now, it's never casual.</p>
+                
+                <p>Health management requires vigilance. Rabbits are prey animals that hide illness until they're quite sick. By the time you notice something's wrong, intervention is often too late. I've learned to conduct regular health checks—examining eyes, ears, teeth, and bodies weekly. Still, we've lost rabbits to sudden illness, and it's frustrating not being able to save them.</p>
+                
+                <p>Heat sensitivity has been our biggest management challenge. Rabbits tolerate cold beautifully but struggle above 85°F. Our summers regularly exceed 90°F, so we've installed shade cloth, frozen water bottles in cages, and even added misters. Despite precautions, we've had heat-related deaths. If you live in a hot climate, factor this into your decision.</p>
+                
+                <h4>The Emotional Dimension</h4>
+                <p>Let's address something rarely discussed honestly: the emotional complexity of raising animals for meat, especially rabbits. They're cute, personable, and if you handle them regularly (which improves meat quality through reduced stress), you'll develop some attachment.</p>
+                
+                <p>We've developed systems to manage this. Breeding animals have names and are treated as permanent residents. Grow-outs aren't named and are handled minimally—enough to keep them calm but not enough to bond strongly. We frame processing day as respectfully completing the purpose these animals were raised for.</p>
+                
+                <p>Some family members struggled initially. My partner took several months before being comfortable eating rabbit we'd raised, though she was fine with chicken or pork from our animals. Kids adapted more easily than I expected—they understand the cycle and appreciate knowing exactly where their food comes from.</p>
+                
+                <p>Only you can determine if you're comfortable with this aspect. I'd suggest volunteering to help someone else process rabbits before committing to your own rabbitry. The reality is very different from imagining it.</p>
+                
+                <h4>The Meat Itself</h4>
+                <p>Rabbit meat deserves mention because it's unfamiliar to many Americans despite being common globally. It's mild, lean, and versatile—similar to chicken but slightly richer. The leanness means it can dry out easily; we've learned to braise, slow-cook, or add fat when roasting.</p>
+                
+                <p>Our family now prefers rabbit to chicken for stews, pot pies, and pasta dishes. It's become a regular part of our rotation, and we've stopped buying chicken entirely. That alone represents significant grocery savings and food security.</p>
+                
+                <h4>My Recommendation</h4>
+                <p>Rabbits are excellent livestock for the right situation. They're ideal if you: have limited space, live in areas where larger livestock aren't permitted, want quiet animals, need efficient feed conversion, and are comfortable with home processing.</p>
+                
+                <p>They're probably not right if you: can't process animals yourself, live in very hot climates without cooling options, want a completely hands-off livestock experience, or aren't comfortable with the reality that cute animals become food.</p>
+                
+                <p>For us, rabbits have been absolutely worthwhile despite challenges. They've moved our homestead significantly toward protein self-sufficiency while fitting into our space and time constraints. But I'm glad I understood the full picture before starting. Hopefully this honest assessment helps you make the decision that's right for your situation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG POST: ROTATIONAL GRAZING -->
+    <div id="grazing" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h2>Rotational Grazing for Chickens</h2>
+                <p>Simple strategy for healthier flocks and soil</p>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="blog-article">
+                <p class="date">September 2025 | By Uncle's Fresh Farm</p>
+                
+                <h3>A Beginner's Guide to Rotational Grazing for Chickens</h3>
+                <p>After keeping chickens in a fixed run for three years, we finally implemented rotational grazing last spring. The transformation in flock health, egg production, and pasture quality has been so dramatic that I wish we'd made this change years earlier. If you're still keeping chickens in a permanent run, let me share why rotation might revolutionize your flock management too.</p>
+                
+                <h4>The Problem with Permanent Runs</h4>
+                <p>Our original setup was typical: a secure coop with an attached 20x20 foot run enclosed in hardware cloth. It worked—chickens were safe, contained, and productive. But problems emerged over time.</p>
+                
+                <p>The run became a muddy, barren wasteland. Chickens are thorough foragers, and they'd consumed every blade of grass within months. Heavy traffic areas near feeders and the coop door turned to compacted bare earth that became mud with every rain.</p>
+                
+                <p>Parasite pressure built steadily. Without fresh ground, the flock was constantly re-exposed to coccidia, worms, and other parasites in the soil. We dealt with recurring health issues despite regular treatment.</p>
+                
+                <p>The aesthetic bothered me too. A barren dirt lot isn't the pastoral chicken scene I'd imagined. It certainly wasn't regenerative agriculture—we were degrading that patch of land rather than improving it.</p>
+                
+                <h4>Understanding Rotational Grazing Basics</h4>
+                <p>Rotational grazing is simple in concept: divide available pasture into sections (paddocks), graze one section while others rest, then rotate. The magic happens during rest periods. Grass regrows, parasites die without hosts present, manure breaks down enriching soil, and the land recovers.</p>
+                
+                <p>For chickens, rotation frequency depends on paddock size and flock size. Our general rule: move when grass is grazed down to about 3 inches, before bare patches appear. This usually means moving every 3-7 days depending on season and weather.</p>
+                
+                <p>The key is adequate rest before returning. Minimum rest period should be 30 days, though 60-90 days is better for parasite control. This gives grass time to recover and breaks most poultry parasite life cycles.</p>
+                
+                <h4>Our System Setup</h4>
+                <p>We divided available pasture into six paddocks using electric poultry netting. Each paddock is roughly 30x30 feet—enough for our 15-bird flock to graze 4-5 days before needing to move. With six paddocks and 4-day grazing periods, each paddock rests at least 20 days before chickens return. Ideally we'd extend rest longer, but property size limits our options.</p>
+                
+                <p>The coop stays stationary at the center, and paddocks radiate outward. We close off the paddock being rested using netting gates while opening access to the next section. Moving the flock is literally just opening one gate and closing another—takes 30 seconds.</p>
+                
+                <p>Electric netting was our biggest expense—about $150 per 164-foot roll, and we needed three rolls. A solar-powered fence charger added another $200. So roughly $650 for complete setup. Not insignificant, but compare this to constantly buying dewormer and treating health issues, and it pays for itself quickly.</p>
+                
+                <p>Alternatively, you could use portable chicken tractors—moveable bottomless coops and runs. These require more labor (moving daily rather than every few days) but need no electric fencing. Choose the system matching your situation and comfort level.</p>
+                
+                <h4>The Transformation</h4>
+                <p>Results appeared faster than expected. Within two weeks, we noticed changes:</p>
+                
+                <p><strong>Flock health improved dramatically.</strong> The chronic low-grade respiratory issues we'd been battling disappeared. Feather quality improved—they became glossier and more complete. Energy levels increased noticeably.</p>
+                
+                <p><strong>Egg production jumped.</strong> We went from 70-75% daily production to 90-95%. Yolks became deeper orange from increased insect and grass consumption. Shells seemed harder too.</p>
+                
+                <p><strong>Feed costs dropped.</strong> With access to grass, insects, and seeds, the flock consumed 20-30% less commercial feed. That's $15-20 monthly savings, or $180-240 annually—significant ongoing return on our infrastructure investment.</p>
+                
+                <p><strong>The land recovered.</strong> Our old permanent run is slowly revegetating now that it's empty. Meanwhile, paddocks being grazed stay green and healthy. When we move the flock, you can clearly see where they've been—grass is shorter but still green, and manure is evenly distributed fertilizing the pasture.</p>
+                
+                <h4>Unexpected Benefits</h4>
+                <p>Some advantages caught me by surprise. Predator pressure decreased noticeably. Moving locations regularly means predators can't establish patterns or focus on one weak point in defenses. The electric netting provides excellent protection—we haven't lost a single bird to predators since implementing rotation, whereas we lost 2-3 annually in our fixed run.</p>
+                
+                <p>Watching chickens behave naturally has been delightful. In the barren run, they mostly stood around looking bored. On pasture, they're constantly active—scratching, foraging, dust-bathing, exploring. They're clearly happier, and that matters to us.</p>
+                
+                <p>The system is actually less work than our fixed run. No more scraping compacted manure and trying to maintain the run. Nature handles cleanup now—manure breaks down naturally, enriching soil rather than becoming a management problem.</p>
+                
+                <h4>Tips for Success</h4>
+                <p>Start simply. You don't need six paddocks initially—even dividing space into two or three sections and rotating will provide benefits over permanent runs.</p>
+                
+                <p>Size paddocks appropriately. Too small and grass can't recover before you return; too large and you lose benefits of concentration. Aim for 3-7 day grazing periods with 30+ day rest.</p>
+                
+                <p>Provide shade in each paddock. We use portable shade structures—simple frames with shade cloth—that move with the flock. In hot weather, adequate shade is non-negotiable.</p>
+                
+                <p>Ensure water access everywhere. We use multiple portable waterers, moving them with paddock changes. Chickens drink surprising amounts, especially on pasture.</p>
+                
+                <p>Be flexible with timing. Wet spring weather means faster grass growth and longer grazing periods. Dry summer conditions mean shorter stays to avoid overgrazing. Learn to read your pasture and adjust accordingly.</p>
+                
+                <h4>Is It Right for You?</h4>
+                <p>Rotational grazing requires some space—difficult to implement on tiny urban lots, though chicken tractors can work in small yards. It also requires initial investment in fencing or portable structures.</p>
+                
+                <p>But if you have a quarter-acre or more and want healthier chickens, better eggs, reduced feed costs, and regenerative land management, rotational grazing delivers remarkable benefits for relatively modest investment. For us, it's transformed chicken keeping from a somewhat problematic maintenance task into a genuinely regenerative, enjoyable aspect of homesteading.</p>
+                
+                <p>The chickens are happier and healthier, the land is improving rather than degrading, and we're producing better food while spending less money. That combination is hard to beat.</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Uncle's Fresh Farm. Cultivating a beautiful, self-sufficient future.</p>
             <div class="social-links">
-                <a href="#">Join Our Newsletter</a>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
+                <a href="#contact" onclick="showPage('contact')">Join Our Newsletter</a>
+                <a href="#" onclick="alert('Coming soon!')">Instagram</a>
+                <a href="#" onclick="alert('Coming soon!')">Facebook</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+            
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Update URL hash without triggering scroll
+            history.pushState(null, null, '#' + pageId);
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.slice(1) || 'home';
+            showPage(hash);
+        });
+
+        // Load correct page on initial load if there's a hash
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                showPage(hash);
+            }
+        });
+    </script>
 </body>
 </html>
