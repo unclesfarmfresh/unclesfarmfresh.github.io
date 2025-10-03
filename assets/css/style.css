@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background-color: #f5f5f7;
+}
+
+h1, h2, h3, h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+/* This is a specific selector, overriding the general h2 rule above */
+.hero h2 {
+    font-family: 'Papyrus', 'Fantasy', cursive;
+    color: #ffffff;
+}
+
+h3, h4 {
+    color: #1a4314;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 0 4px rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.logo h1 a {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #1d1d1f;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.7rem 0;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+nav a .icon {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+    line-height: 1;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+nav a:hover, nav a.active {
+    color: #007aff;
+    opacity: 1;
+}
+
+.hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-color: #386641;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Images/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    padding: 2rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero h2 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto 2.5rem;
+    font-weight: 400;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #799a5e;
+    color: #1a4314;
+    padding: 1.2rem 2.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 20px rgba(121, 154, 94, 0.4);
+    font-family: 'Georgia', serif;
+}
+
+.cta-button:hover {
+    background-color: #92b975;
+    transform: translateY(-3px);
+}
+
+main {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    color: #1a4314;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #799a5e;
+    border-radius: 2px;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.topic-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.topic-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: #e6eedc;
+}
+
+.topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
+.topic-image.poultry { background-image: url('/Images/Chickens.jpg'); }
+.topic-image.dairy { background-image: url('/Images/Sunflower.jpg'); }
+.topic-image.permaculture { background-image: url('https://via.placeholder.com/400x220/9fc0a8/ffffff?text=Permaculture+Design'); }
+.topic-image.livestock { background-image: url('https://via.placeholder.com/400x220/b0a498/ffffff?text=Small+Livestock'); }
+.topic-image.self-sufficiency { background-image: url('https://via.placeholder.com/400x220/8b8f8b/ffffff?text=Homestead+Lifestyle'); }
+
+.topic-content {
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.topic-content h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #1a4314;
+}
+
+.topic-content p {
+    color: #6a6a6a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.latest-posts {
+    margin-top: 6rem;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.post-item {
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.post-thumbnail {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #e0e6e0;
+    border-bottom: 1px solid #eee;
+}
+
+.post-thumbnail.hugelkultur {
+    background-image: url('https://via.placeholder.com/400x200/8b7355/ffffff?text=Hugelkultur');
+}
+
+.post-thumbnail.rabbits {
+    background-image: url('https://via.placeholder.com/400x200/d4a574/ffffff?text=Rabbits');
+}
+
+.post-thumbnail.grazing {
+    background-image: url('https://via.placeholder.com/400x200/a9c298/ffffff?text=Rotational+Grazing');
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-content h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #1a4314;
+}
+
+.post-content .date {
+    font-size: 0.85rem;
+    color: #799a5e;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #6a6a6a;
+}
+
+.read-more {
+    color: #799a5e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.read-more:hover {
+    color: #1a4314;
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 25px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #386641 0%, #799a5e 100%);
+    color: white;
+}
+
+.page-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.blog-article {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin-bottom: 3rem;
+}
+
+.blog-article h2 {
+    font-size: 2.5rem;
+    margin: 2.5rem 0 1.5rem;
+    color: #1a4314;
+}
+
+.blog-article h3 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: #1a4314;
+}
+
+.blog-article h4 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: #386641;
+}
+
+.blog-article p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.blog-article ul, .blog-article ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.blog-article li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+.post-navigation {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.post-navigation a {
+    color: #799a5e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.post-navigation a:hover {
+    color: #1a4314;
+}
+
+.prev-post {
+    text-align: left;
+}
+
+.next-post {
+    text-align: right;
+}
+
+footer {
+    background-color: #1a4314;
+    color: #e0e6e0;
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 0.95rem;
+    margin-top: 6rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: #e0e6e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.social-links a:hover {
+    color: #799a5e;
+    border-color: #799a5e;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero {
+        height: 400px;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    .page-header h2 {
+        font-size: 2rem;
+    }
+    .blog-article {
+        padding: 1.5rem;
+    }
+    .post-navigation {
+        flex-direction: column;
+    }
+}

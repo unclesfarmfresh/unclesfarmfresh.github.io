@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="page-header">
+    <div class="container">
+        <h2>{{ page.title }}</h2>
+        <p>{{ page.subtitle }}</p>
+    </div>
+</div>
+<div class="page-content">
+    <div class="blog-article">
+        <p class="date">{{ page.date | date: "%B %Y" }} | By {{ page.author | default: site.title }}</p>
+
+    {{ content }}        <div class="post-navigation">        {% if page.previous.url %}        <a href="{{ page.previous.url | relative_url }}" class="prev-post">← {{ page.previous.title }}</a>        {% endif %}                {% if page.next.url %}        <a href="{{ page.next.url | relative_url }}" class="next-post">{{ page.next.title }} →</a>        {% endif %}    </div></div>
+
+</div>

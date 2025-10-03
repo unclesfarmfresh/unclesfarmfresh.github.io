@@ -1,0 +1,48 @@
+# Site settings
+title: Uncle's Fresh Farm
+email: hello@unclesfreshfarm.com
+description: >-
+  Discover the beauty of sustainable living with Uncle's Fresh Farm. 
+  Explore organic gardening, backyard poultry, permaculture, and self-sufficiency guides.
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:title/
+
+# Collections
+collections:
+  guides:
+    output: true
+    permalink: /guides/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Uncle's Fresh Farm"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
