@@ -5,7 +5,7 @@ description: >-
   Discover the beauty of sustainable living with Uncle's Fresh Farm. 
   Explore organic gardening, backyard poultry, permaculture, and self-sufficiency guides.
 baseurl: ""
-url: ""
+url: "https://unclesfarmfresh.github.io"
 
 # Build settings
 markdown: kramdown
