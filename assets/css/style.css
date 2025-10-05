@@ -5,19 +5,18 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif; 
     line-height: 1.7;
     color: #1d1d1f;
     background-color: #f5f5f7;
 }
 
 h1, h2, h3, h4 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif;
-    color: #1d1d1f;
-    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Georgia', serif; 
+    color: #1d1d1f; 
+    font-weight: 600; 
 }
 
-/* This is a specific selector, overriding the general h2 rule above */
 .hero h2 {
     font-family: 'Papyrus', 'Fantasy', cursive;
     color: #ffffff;
@@ -40,43 +39,41 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 0 4px rgba(0, 0, 0, 0.02);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 0 4px rgba(0, 0, 0, 0.02); 
+    backdrop-filter: blur(10px); 
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    max-width: 1200px;
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 0 25px;
 }
 
-.logo h1 a {
+.logo h1 {
     font-size: 1.1rem;
     margin: 0;
     color: #1d1d1f;
     font-weight: 600;
     letter-spacing: -0.02em;
-    cursor: pointer;
-    text-decoration: none;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 2.2rem;
-    margin: 0;
+    margin: 0; 
     padding: 0;
 }
 
 nav a {
-    color: #1d1d1f;
+    color: #1d1d1f; 
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 400;
-    padding: 0.7rem 0;
+    padding: 0.7rem 0; 
     transition: color 0.3s ease, opacity 0.3s ease;
     opacity: 0.7;
     display: flex;
@@ -93,12 +90,12 @@ nav a .icon {
 
 nav a:hover, nav a.active {
     color: #007aff;
-    opacity: 1;
+    opacity: 1; 
 }
 
 .hero {
     position: relative;
-    height: 600px;
+    height: 600px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,10 +111,10 @@ nav a:hover, nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/Images/Hero.jpg');
+    background-image: url('/assets/images/Hero.jpg');
     background-size: cover;
     background-position: center;
-    filter: brightness(0.7);
+    filter: brightness(0.7); 
 }
 
 .hero-content {
@@ -144,8 +141,8 @@ nav a:hover, nav a.active {
 
 .cta-button {
     display: inline-block;
-    background-color: #799a5e;
-    color: #1a4314;
+    background-color: #799a5e; 
+    color: #1a4314; 
     padding: 1.2rem 2.5rem;
     border-radius: 5px;
     text-decoration: none;
@@ -158,7 +155,7 @@ nav a:hover, nav a.active {
 }
 
 .cta-button:hover {
-    background-color: #92b975;
+    background-color: #92b975; 
     transform: translateY(-3px);
 }
 
@@ -182,7 +179,7 @@ main {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: #799a5e;
+    background-color: #799a5e; 
     border-radius: 2px;
 }
 
@@ -194,9 +191,9 @@ main {
 
 .topic-card {
     background-color: #ffffff;
-    border-radius: 6px;
+    border-radius: 6px; 
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     border: 1px solid #e0e0e0;
@@ -206,8 +203,8 @@ main {
 }
 
 .topic-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
 }
 
 .topic-image {
@@ -219,8 +216,8 @@ main {
 }
 
 .topic-image.gardening { background-image: url('https://via.placeholder.com/400x220/a9c298/ffffff?text=Organic+Garden'); }
-.topic-image.poultry { background-image: url('/Images/Chickens.jpg'); }
-.topic-image.dairy { background-image: url('/Images/Sunflower.jpg'); }
+.topic-image.poultry { background-image: url('/assets/images/Chickens.jpg'); }
+.topic-image.dairy { background-image: url('/assets/images/Sunflower.jpg'); }
 .topic-image.permaculture { background-image: url('https://via.placeholder.com/400x220/9fc0a8/ffffff?text=Permaculture+Design'); }
 .topic-image.livestock { background-image: url('https://via.placeholder.com/400x220/b0a498/ffffff?text=Small+Livestock'); }
 .topic-image.self-sufficiency { background-image: url('https://via.placeholder.com/400x220/8b8f8b/ffffff?text=Homestead+Lifestyle'); }
@@ -254,7 +251,7 @@ main {
 
 .post-item {
     background-color: #ffffff;
-    border-radius: 6px;
+    border-radius: 6px; 
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -279,15 +276,13 @@ main {
     border-bottom: 1px solid #eee;
 }
 
-.post-thumbnail.hugelkultur {
+.post-thumbnail.hugelkultur { 
     background-image: url('https://via.placeholder.com/400x200/8b7355/ffffff?text=Hugelkultur');
 }
-
-.post-thumbnail.rabbits {
+.post-thumbnail.rabbits { 
     background-image: url('https://via.placeholder.com/400x200/d4a574/ffffff?text=Rabbits');
 }
-
-.post-thumbnail.grazing {
+.post-thumbnail.grazing { 
     background-image: url('https://via.placeholder.com/400x200/a9c298/ffffff?text=Rotational+Grazing');
 }
 
@@ -360,12 +355,6 @@ main {
     margin-bottom: 3rem;
 }
 
-.blog-article h2 {
-    font-size: 2.5rem;
-    margin: 2.5rem 0 1.5rem;
-    color: #1a4314;
-}
-
 .blog-article h3 {
     font-size: 2rem;
     margin: 2rem 0 1rem;
@@ -394,36 +383,8 @@ main {
     line-height: 1.7;
 }
 
-.post-navigation {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 2px solid #e0e0e0;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.post-navigation a {
-    color: #799a5e;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.post-navigation a:hover {
-    color: #1a4314;
-}
-
-.prev-post {
-    text-align: left;
-}
-
-.next-post {
-    text-align: right;
-}
-
 footer {
-    background-color: #1a4314;
+    background-color: #1a4314; 
     color: #e0e6e0;
     text-align: center;
     padding: 4rem 0;
@@ -477,8 +438,5 @@ footer p {
     }
     .blog-article {
         padding: 1.5rem;
-    }
-    .post-navigation {
-        flex-direction: column;
     }
 }
